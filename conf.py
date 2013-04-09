@@ -8,7 +8,6 @@ TIMEZONE = "Europe/Berlin"
 
 GITHUB_URL = 'http://github.com/rtens/'
 REVERSE_CATEGORY_ORDER = True
-LOCALE = "C"
 DEFAULT_PAGINATION = 5
 
 SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
