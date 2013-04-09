@@ -5,7 +5,6 @@ SITENAME = "Nikolas.M@rtens"
 SITEURL = 'http://rtens.cygnus.uberspace.de/blog'
 TIMEZONE = "Europe/Berlin"
 
-GITHUB_URL = 'http://github.com/rtens/'
 REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = 5
 
