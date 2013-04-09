@@ -1,5 +1,5 @@
 Tags: git, bash, python
-Summary: How I set this blog up with pelican and git-push-deployment
+Summary: Setting-up this blog with pelican and git-push-deployment.
 
 So yeah I decided to start a blog again since it's been a while. The last one was actually about [my time living in Valencia][vlc]. This one is probably gonna be mostly about software engineering stuff. This first post is gonna be about how I set this blog. I know there are at least ten gillion articles about this but then now it's ten gillion and one.
 
