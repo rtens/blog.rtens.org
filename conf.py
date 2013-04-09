@@ -16,3 +16,6 @@ STATIC_PATHS = ["img"]
 
 FILENAME_METADATA  = '(?P<date>\d{4}-\d{2}-\d{2}) (?P<title>.*)'
 ARTICLE_DIR = ('articles/')
+THEME = 'themes/waterspill-en'
+
+DELETE_OUTPUT_DIRECTORY = True
