@@ -10,6 +10,7 @@ SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
 		  ('email', 'mailto:blog@rtens.org'))
 
 SITEURL = 'http://blog.rtens.cygnus.uberspace.de'
+ROOT_URL = SITEURL
 FEED_RSS = 'feeds/rss.xml'
 
 REVERSE_CATEGORY_ORDER = True
