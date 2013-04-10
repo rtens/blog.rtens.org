@@ -2,14 +2,18 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Nikolas Martens'
 SITENAME = "Nikolas.M@rtens"
-SITEURL = 'http://rtens.cygnus.uberspace.de/blog'
+SITEURL = 'http://blog.rtens.cygnus.uberspace.de'
+ROOT_URL = SITEURL
+ARTICLE_ROOT_URL = ROOT_URL
 TIMEZONE = "Europe/Berlin"
+TWITTER_USERNAME = 'rtens_'
 
 REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = 5
 
 SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
-          ('github', 'http://github.com/rtens'),)
+          ('github', 'http://github.com/rtens'),
+		  ('email', 'mailto:blog@rtens.org'))
 
 # static paths will be copied under the same name
 STATIC_PATHS = ["img"]
