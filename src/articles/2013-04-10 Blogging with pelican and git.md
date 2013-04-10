@@ -1,27 +1,34 @@
 Tags: git, bash, python
 
-So yeah I decided to start a blog again since it's been a while. The last one was actually about [my time living in Valencia][vlc]. This one is probably gonna be mostly about software engineering stuff. This first post is gonna be about how I set this blog. I know there are at least ten gillion articles about this but then now it's ten gillion and one.
+If it wasn't for [pelican], this blog would probably not exist. So here is a brief description on the why and what and how.
 
-[vlc]: http://off-to-vlc.blogspot.de/
+[pelican]: http://github.com/getpelican/pelican
 
 ## Step 1: engine
 
-My colleague showed [pelican] to me yesterday which is a static blog generator written in [python]. It means that I can put my files and articles in whatever directory structure I fancy and the website will be generated as static files during deployment. The articles are written in a simple mark-up language (I use [markdown]) and annotated with meta-information. This has some nice advantages:
+The spark that got this blog going was my colleague showing me [pelican] yesterday which is a static blog generator written in [python]. This means that I can put my files and articles in whatever directory structure I fancy and generate the website as static files. The articles are written in a simple mark-up language (I use [markdown]) and annotated with meta-information. This has some nice advantages:
 
-1. I can use whatever editor I want to write articles (which is especially nice on the phone)
+1. Speed and security
 1. No internet access required (I sync across devices with [Dropbox])
-1. Including custom static pages comes naturally
-1. I just like having my stuff in my machine instead some database somewhere in the interwebs
+1. No web editors (which annoy especially on the phone)
+1. Adding custom static pages comes naturally
+1. I kept a copy of my blog posts on my machine anyway
+
+[python]: http://www.python.org/
+[markdown]: http://daringfireball.net/projects/markdown/
+[Dropbox]: http://www.dropbox.com/home
 
 ## Step 2: installation
 
-I recently switched my web hosting to [uberspace] which is offers a awesome service a quite unique business model. You pay as much as you want, minimum 1€ per "space". This makes it possible to have many accounts, which is perfect when having a bunch of independent projects as in my case. Uberspace also provides more languages and databases that I could think of including python which I haven't even had on my previous hoster. This made installing and running pelican easy:
+I recently switched my web hosting to [uberspace] which offers all I could ever wish for and a surprising pricing model. You pay basically as much as you want with a minimum of 1€ per "space" and month. This makes it possible to have multiple accounts, which is perfect when having a bunch of independent projects as in my case. Thanks to my new hoster, installing and running pelican was easy:
 	
 	:::bash
 	[remote]$ easy_install pelican markdown
 	[remote]$ pelican
 
 This generates an empty blog in an `output` directory.
+
+[uberspace]: http://uberspace.de/
 
 ## Step 3: configuration
 
@@ -45,22 +52,18 @@ Pelican works pretty well [out-of-the-box] but some configuration is eventually 
 	FILENAME_METADATA  = '(?P<date>\d{4}-\d{2}-\d{2}) (?P<title>.*)'
 	ARTICLE_DIR = ('articles/')
 	
-[pelican]: http://github.com/getpelican/pelican
-[python]: http://www.python.org/
-[markdown]: http://daringfireball.net/projects/markdown/
-[Dropbox]: http://www.dropbox.com/home
 [out-of-the-box]: https://pelican.readthedocs.org/en/3.1.1/getting_started.html
 
 ## Step 4: deployment
 
-I wanted to be able to bring my blog online with
+I wanted to be able to bring my blog online with [git] push
 
 	:::bash
 	[local]$ git push web
 
-and found a nice [blog post][push-deploy] about it.
+and found a nice [blog post][push-deploy] with instructions.
 
-The first step is to create a bare repository on the host
+The first step is to create a bare repository on the host. it must be bare so we can push to it.
 
 	:::bash
 	[remote]$ mkdir blog.git && cd blog.git
@@ -101,5 +104,5 @@ Finally, on your local machine, create a repostory, add the remote one and push 
 
 That's all.
 
-[uberspace]: http://uberspace.de/
+[git]: http://git-scm.com/
 [push-deploy]: http://toroid.org/ams/git-website-howto
