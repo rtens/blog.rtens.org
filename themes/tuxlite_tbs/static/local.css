@@ -42,6 +42,14 @@ h3 { margin-top: 2.5em; }
 /* Metadata */
 .well.small { padding: 6px 6px 4px; }
 
+.right-column .well {background-color: #FBFBFB;}
+.right-column .well.list {padding: 8px 0;}
+img.rounded {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 /* Read more button */
 .btn-info.xsmall {
     padding: 1px 3px 1px;
