@@ -62,9 +62,11 @@
         
         <div class="right-column span3">
 		
+            {% if ON_INDEX_PAGE %}
 			<div class="well">
 				<img class="rounded" src="{{ SITEURL }}/theme/images/avatar.png">
 			</div>
+            {% endif %}
 
             {% if SOCIAL %}
             <div class="social">
