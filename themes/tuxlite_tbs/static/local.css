@@ -56,10 +56,6 @@ h3 { margin-top: 2.5em; }
 .summary { margin-bottom: 4em; }
 .summary pre { display: none; }
 
-/* Code blocks */
-.codehilite { min-width: 600px; }
-
-
 /* Styling for Sidebar */
 .social a:before {margin-right: 8px; vertical-align: -3px;}
 .social a[href*='activestate.com'] {content: url('./images/icons/activestate.png');}
