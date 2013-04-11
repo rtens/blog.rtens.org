@@ -107,7 +107,7 @@ That's all
 [git]: http://git-scm.com/
 [push-deploy]: http://toroid.org/ams/git-website-howto
 
-## Step 5: better deployment
+## Update: better deployment
 
 The above approach does not react on errors during the generation. So I decided to use the pre-receive hook for deployment and abort the push if the generation does not run smoothly. I found the instructions on [codeutopia].
 
