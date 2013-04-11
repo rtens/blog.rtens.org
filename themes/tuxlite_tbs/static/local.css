@@ -43,6 +43,7 @@ h3 { margin-top: 2.5em; }
 .well.small { padding: 6px 6px 4px; }
 
 .right-column .well {background-color: #FBFBFB;}
+.right-column .well.avatar {text-align: center;} 
 .right-column .well.list {padding: 8px 0;}
 img.rounded {
 	-webkit-border-radius: 5px;
