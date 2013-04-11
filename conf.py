@@ -9,7 +9,7 @@ SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
           ('github', 'http://github.com/rtens'),
 		  ('email', 'mailto:blog@rtens.org'))
 
-SITEURL = 'http://blog.rtens.cygnus.uberspace.de'
+SITEURL = 'http://blog.rtens.org'
 ROOT_URL = SITEURL
 FEED_RSS = 'feeds/rss.xml'
 
