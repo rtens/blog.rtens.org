@@ -1,15 +1,15 @@
 Tags: git, linux, python
 
-If it wasn't for [pelican](), this blog would probably not exist. So here is a brief description on the why and what and how.
+If it wasn't for [pelican], this blog would probably not exist. So here is a brief description on the why and what and how.
 
 [pelican]: http://github.com/getpelican/pelican
 
 ## Step 1: engine
 
-The spark that got this blog going was my colleague showing me [pelican]() yesterday which is a static blog generator written in [python](). This means that I can put my files and articles in whatever directory structure I fancy and generate the website as static files. The articles are written in a simple mark-up language (I use [markdown]()) and annotated with meta-information. This has some nice advantages:
+The spark that got this blog going was my colleague showing me [pelican] yesterday which is a static blog generator written in [python]. This means that I can put my files and articles in whatever directory structure I fancy and generate the website as static files. The articles are written in a simple mark-up language (I use [markdown]) and annotated with meta-information. This has some nice advantages:
 
 1. Speed and security
-1. No internet access required (I sync across devices with [Dropbox]())
+1. No internet access required (I sync across devices with [Dropbox])
 1. No web editors (which annoy especially on the phone)
 1. Adding custom static pages comes naturally
 1. I kept a copy of my blog posts on my machine anyway
@@ -20,7 +20,7 @@ The spark that got this blog going was my colleague showing me [pelican]() yeste
 
 ## Step 2: installation
 
-I recently switched my web hosting to [uberspace]() which offers all I could ever wish for and a surprising pricing model. You pay basically as much as you want with a minimum of 1€ per "space" and month. This makes it possible to have multiple accounts, which is perfect when having a bunch of independent projects as in my case. Thanks to my new hoster, installing and running pelican was easy:
+I recently switched my web hosting to [uberspace] which offers all I could ever wish for and a surprising pricing model. You pay basically as much as you want with a minimum of 1€ per "space" and month. This makes it possible to have multiple accounts, which is perfect when having a bunch of independent projects as in my case. Thanks to my new hoster, installing and running pelican was easy:
 	
 	:::bash
 	[remote]$ easy_install pelican markdown
@@ -32,7 +32,7 @@ This generates an empty blog in an `output` directory.
 
 ## Step 3: configuration
 
-Pelican works pretty well [out-of-the-box]() but some configuration is eventually necessary. Here is my `config.py` with some comments.
+Pelican works pretty well [out-of-the-box] but some configuration is eventually necessary. Here is my `config.py` with some comments.
 
 	:::python
 	from __future__ import unicode_literals
@@ -56,7 +56,7 @@ Pelican works pretty well [out-of-the-box]() but some configuration is eventuall
 
 ## Step 4: deployment
 
-I wanted to be able to bring my blog online with [git]() push
+I wanted to be able to bring my blog online with [git] push
 
 	:::bash
 	[local]$ git push web
