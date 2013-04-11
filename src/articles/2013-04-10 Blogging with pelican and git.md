@@ -93,7 +93,7 @@ Then create and activate the post-receive hook
 
 	[remote]$ chmod +x hooks/post-receive
 
-Finally, on your local machine, create a repostory, add the remote one and push once
+Finally, on your local machine, create a repostory, add the remote repository and push once
 
 	:::bash
 	[local]$ mkdir blog && cd blog
@@ -102,7 +102,57 @@ Finally, on your local machine, create a repostory, add the remote one and push 
 	[local]$ git add *
 	[local]$ git push web master
 
-That's all.
+That's all
 
 [git]: http://git-scm.com/
 [push-deploy]: http://toroid.org/ams/git-website-howto
+
+## Step 5: better deployment
+
+The above approach does not react on errors during the generation. So I decided to use the pre-receive hook for deployment and abort the push if the generation does not run smoothly. I found the instructions on [codeutopia].
+
+	:::bash
+	#!/bin/sh
+
+	home=/home/rtens
+	tmp=$home/tmp/blog
+	out=$home/www/blog.rtens.org
+	pelican=$home/bin/pelican
+
+	echo "Deploying to $out ..."
+
+	if [[ -d $tmp ]] ; then
+		rm -rf $tmp
+	fi
+	 
+	mkdir $tmp
+
+	while read oldrev newrev refname
+	do
+		revtmp=$tmp/$newrev
+		errors=$revtmp/errors
+		mkdir $revtmp
+		
+		echo "Extracting working copy for $newrev ..."
+		git archive $newrev | tar -x -C $revtmp
+
+		echo "Generating blog..."
+		cd $revtmp
+		$pelican -o $out -s conf.py src 2>$errors
+		rc=$?
+		
+		if [[ $rc != 0 ]] ; then
+			echo "ERROR: Errors while generating blog."
+			exit $rc
+		fi
+		
+		if [[ -s $errors ]] ; then
+			echo "ERROR: Warnings while generating blogs."
+			exit 1
+		fi
+	done
+
+	echo "Done."
+	exit 0
+
+[codeutopia]: http://codeutopia.net/blog/2011/06/30/how-to-automatically-run-unit-tests-from-a-git-push/
