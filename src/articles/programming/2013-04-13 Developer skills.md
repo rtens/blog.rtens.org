@@ -9,8 +9,8 @@ When it comes to PHP development, there is also [phptherightway.com] with a nice
 1. Version Control System ([subversion], [git], [github])
 2. Testing (phpunit, tdd, [bdd])
 3. Debugging (xdebug)
-4. Best Practices ([clean code], [design patterns], [beautiful code])
-5. Dependency Management ([composer], [packagist])
+4. Dependency Management ([composer], [packagist])
+5. Best Practices ([clean code], [design patterns], [beautiful code])
 
 [clean-code-developer.de]: http://www.clean-code-developer.de/
 [phptherightway.com]: http://www.phptherightway.com/
