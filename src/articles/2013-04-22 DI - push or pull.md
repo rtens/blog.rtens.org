@@ -67,8 +67,8 @@ Here, only the DIC itself is passed to the class. If this is done consistently, 
 
 ## Conclusion ##
 
-While the software architect in me strongly leans towards pushing, the lazy programmer in me often times uses pulling. It's just less writing. But it's probably not a good idea to couple everything with your DIC. This is confirmed by the [clean code cheat sheet][clean] with the anti-pattern "Artificial Coupling".
+While the software architect in me strongly leans towards pushing, the lazy programmer in me often times uses pulling. It's just less writing. But it's probably not a good idea to couple everything with your DIC. This is confirmed by the [clean code cheat sheet][clean] with the anti-pattern "Artificial Coupling". But still, the easier to read and to maintain code could be worth it.
 
-I would like to know what you think about it. Which approach do you usually use?
+I would like to know what you think about this. Which approach do you usually use?
 
 [clean]: http://www.planetgeek.ch/wp-content/uploads/2011/02/Clean-Code-Cheat-Sheet-V1.3.pdf
