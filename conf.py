@@ -4,6 +4,7 @@ AUTHOR = 'Nikolas Martens'
 SITENAME = "Nikolas.M@rtens"
 TIMEZONE = "Europe/Berlin"
 TWITTER_USERNAME = 'rtens_'
+GOOGLE_ANALYTICS = 'UA-40634631-1'
 
 SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
           ('github', 'http://github.com/rtens'),
