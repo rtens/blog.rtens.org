@@ -18,7 +18,7 @@ REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = 5
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["img"]
+STATIC_PATHS = ["img", "res"]
 
 FILENAME_METADATA  = '(?P<date>\d{4}-\d{2}-\d{2}) (?P<title>.*)'
 ARTICLE_DIR = ('articles/')
