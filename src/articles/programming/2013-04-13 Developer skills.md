@@ -10,7 +10,7 @@ When it comes to PHP development, there is also [phptherightway.com] with a nice
 2. Testing (phpunit, tdd, [bdd])
 3. Debugging (xdebug)
 4. Dependency Management ([composer], [packagist])
-5. Best Practices ([clean code], [design patterns], [beautiful code])
+5. Best Practices ([clean code]/[r][clean coder], [design patterns], [beautiful code])
 
 [clean-code-developer.de]: http://www.clean-code-developer.de/
 [phptherightway.com]: http://www.phptherightway.com/
@@ -23,3 +23,4 @@ When it comes to PHP development, there is also [phptherightway.com] with a nice
 [beautiful code]: http://shop.oreilly.com/product/9780596510046.do
 [composer]: http://getcomposer.com/
 [packagist]: http://packagist.org/
+[clean coder]: http://www.amazon.de/The-Clean-Coder-Professional-Programmers/dp/0137081073

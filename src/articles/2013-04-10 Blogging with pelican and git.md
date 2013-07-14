@@ -20,7 +20,7 @@ The spark that got this blog going was my colleague showing me [pelican] yesterd
 
 ## Step 2: installation
 
-I recently switched my web hosting to [uberspace] which offers all I could ever wish for and a surprising pricing model. You pay basically as much as you want with a minimum of 1€ per "space" and month. This makes it possible to have multiple accounts, which is perfect when having a bunch of independent projects as in my case. Thanks to my new hoster, installing and running pelican was easy:
+I recently switched my web hosting to [uberspace] which offers all I could ever wish for and a surprising pricing model. You pay basically as much as you want with a minimum of 1€ per "space" and month. This makes it possible to have multiple accounts, which is perfect when having a bunch of independent projects as in my case. Thanks to my new hoster, installing and running pelican was simply
 	
 	:::bash
 	[remote]$ easy_install pelican markdown
@@ -28,7 +28,12 @@ I recently switched my web hosting to [uberspace] which offers all I could ever 
 
 This generates an empty blog in an `output` directory.
 
+My Windows machine at home took a little more persuasion. First step is to install Python version 2. Fortunately there is a nice package with [installer]. Before we can install pelican we need easy_install first which can be obtained by running [ez_setup.py] from [this page][setuptools]. Now we can use the two commands shown above to create a local version of the blog.
+
 [uberspace]: http://uberspace.de/
+[installer]: http://www.python.org/getit/
+[ez_setup.py]: https://bitbucket.org/pypa/setuptools/downloads/ez_setup.py
+[setuptools]: https://pypi.python.org/pypi/setuptools/0.9.1#installation-instructions
 
 ## Step 3: configuration
 
