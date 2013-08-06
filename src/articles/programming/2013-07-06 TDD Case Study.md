@@ -164,6 +164,8 @@ Fail! But that was expected. Actually, when doing TDD, I always make sure to hav
 Seems like I am getting closer. Now I get 'xy' as the solution. And if the goat, the wolf and the cabbage were standing on catapults this would actually work but for our puzzle the farmer can only move an object if they are on the same side. This means we need to know on which side everyone (the objects and the farmer) is. Let's put this information into the dictionary `positions` which is indexed by the object (including the farmer) and has a boolean value indicating if the object is on the left side of the river (`True`) or on the right side (`False`). 
 
 	:::python	
+	farmer = '!'
+	
 	def solve(puzzle):
 		positions = getStartPositions(puzzle)
 		
@@ -173,18 +175,24 @@ Seems like I am getting closer. Now I get 'xy' as the solution. And if the goat,
 		return moves
 
 	def getStartPositions(puzzle):
-		start = {'f': True}
+		start = {farmer: True}
 		for object in puzzle.objects:
 			start[object] = True
 		return start
+		
+I guess a coder in the true python spirit would write the second function as
+
+	:::python
+	def getStartPositions(puzzle):
+		return dict([(object, True) for object in [farmer] + puzzle.objects])
 		
 Also, an object can only be moved when it's on the same side as the farmer.
 
 	:::python
 	def move(object, positions):
-		if positions[object] == positions['f']:
+		if positions[object] == positions[farmer]:
 			positions[object] = not positions[object]
-			positions['f'] = not positions['f']
+			positions[farmer] = not positions[farmer]
 			return object
 		else:
 			return ''
@@ -194,7 +202,7 @@ Let's run it... Seems like the farmer gets stuck on the right side. Let's give h
 	:::python
 	def move(object, positions):
 		if object == '_':
-			positions['f'] = not positions['f']
+			positions[farmer] = not positions[farmer]
 			return '_'
 		[...]
 		
@@ -210,11 +218,7 @@ This means that we have to add `'_'` (nothing) to the list of objects that can b
 		return moves
 		
 	def getMovables(puzzle):
-		movables = []
-		for object in puzzle.objects:
-			movables.append(object)
-		movables.append('_')
-		return movables
+		return puzzle.objects + ['_']
 			
 Let's run it. Bummer. Now the first test fails. Seems like it doesn't know when to stop. And while we're at it, let's have the farmer make trips repeatedly until everybody is on the other side.
 
@@ -231,10 +235,7 @@ Let's run it. Bummer. Now the first test fails. Seems like it doesn't know when 
 					return moves
 
 	def getTargetPositions(puzzle):
-		start = {'f': False}
-		for object in puzzle.objects:
-			start[object] = False
-		return start
+		return dict([(object, False) for object in [farmer] + puzzle.objects])
 		
 Bingo! Both tests are passing. Next step: three objects.
 
@@ -268,11 +269,11 @@ If I run this now python reminds me that I need to define the `isValid` function
 	def isValid(puzzle, positions):
 		for threat in puzzle.constraints:
 			victim = puzzle.constraints[threat]
-			if positions[threat] == positions[victim] and not positions['f'] == positions[threat]:
+			if positions[threat] == positions[victim] and not positions[farmer] == positions[threat]:
 				return False
 		return True
 	
-Looks good enough. So I run it. And bam! Some weird thing went wrong. Debugging time. So I check the positions after the first move and see that the goat is still moved. Simply not registering the move is apparently not enough, I also need to undo it. Luckily in this puzzle, undoing means just doing the same move again.
+Looks good enough. So I run it. And bam! Some weird thing went wrong. Debugging time. So I check the positions after the first move and see that the goat is still moved. Simply not registering the move is apparently not enough, I also need to undo it. Luckily in this puzzle, undoing means just doing the same move again.^^
 
 	:::python
 	if (isValid(puzzle, positions)):

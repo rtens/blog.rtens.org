@@ -10,6 +10,7 @@ class Puzzle:
 	def addConstraint(self, eater, eaten):
 		self.constraints[eater] = eaten
 
+farmer = '!'
 		
 def solve(puzzle):
 	positions = getStartPositions(puzzle)
@@ -27,42 +28,34 @@ def solve(puzzle):
 				return moves
 				
 def isValid(puzzle, positions):
+	p = positions
 	for threat in puzzle.constraints:
 		victim = puzzle.constraints[threat]
-		if positions[threat] == positions[victim] and not positions['f'] == positions[threat]:
+		if p[threat] == p[victim] and not p[farmer] == p[threat]:
 			return False
 	return True
 
-def getTargetPositions(puzzle):
-	start = {'f': False}
-	for object in puzzle.objects:
-		start[object] = False
-	return start
-
-def getStartPositions(puzzle):
-	start = {'f': True}
-	for object in puzzle.objects:
-		start[object] = True
-	return start
-
 def move(object, positions):
+	p = positions
 	if object == '_':
-		positions['f'] = not positions['f']
+		p[farmer] = not p[farmer]
 		return '_'
 		
-	if positions[object] == positions['f']:
-		positions[object] = not positions[object]
-		positions['f'] = not positions['f']
+	if p[object] == p[farmer]:
+		p[object] = not p[object]
+		p[farmer] = not p[farmer]
 		return object
 	else:
 		return ''
+
+def getTargetPositions(puzzle):
+	return dict([(object, False) for object in [farmer] + puzzle.objects])
+
+def getStartPositions(puzzle):
+	return dict([(object, True) for object in [farmer] + puzzle.objects])
 		
 def getMovables(puzzle):
-	movables = []
-	for object in puzzle.objects:
-		movables.append(object)
-	movables.append('_')
-	return movables
+	return puzzle.objects + ['_']
 	
 	
 if __name__ == '__main__':
