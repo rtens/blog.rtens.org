@@ -118,7 +118,9 @@ The design is dramatically different from the previous implementation. The new s
 	puzzle.addObject('a')
 	assert solve(puzzle) == 'a'
 	
-This time I will specify the tests iteratively after I made the last one pass. TDD works either way. You can either specify the entire behaviour up-front with increasing complexities or discover the steps along the way. Usually it's a mix of both. So let's make the first test pass. We need a class and two functions.
+<div style="background-color: #cc3300">&nbsp;</div>
+	
+This time I will specify the tests iteratively after I made the last one pass. TDD works either way. You can either specify the entire behaviour up-front with increasing complexities or discover the steps along the way. Usually it's a mix of both. I also put a red or green bar below every code snippet to indicate the state of the test suite. So let's make the first test pass. We need a class and two functions.
 
 	:::python
 	class Puzzle:
@@ -130,6 +132,8 @@ This time I will specify the tests iteratively after I made the last one pass. T
 	
 	def move(object):
 		return object
+
+<div style="background-color: green">&nbsp;</div>
 	
 That's what I call a tiny step. I didn't really implement anything and the test is already passing. Let's refactor that duplication in `solve`.
 
@@ -143,6 +147,8 @@ That's what I call a tiny step. I didn't really implement anything and the test 
 
 	def solve(puzzle):
 		return move(puzzle.objects[0])
+
+<div style="background-color: green">&nbsp;</div>
 	
 This already solves all puzzles with just one object. How about two objects?
 
@@ -151,6 +157,8 @@ This already solves all puzzles with just one object. How about two objects?
 	puzzle.addObject('x')
 	puzzle.addObject('y')
 	assert solve(puzzle) == 'x_y'
+
+<div style="background-color: #cc3300">&nbsp;</div>
 	
 Fail! But that was expected. Actually, when doing TDD, I always make sure to have seen every test failing at least once. It's the best way to confirm the tests are actually doing something. The reason for the failing test is that `solve` still only moves the first object. So let's try to fix this.
 
@@ -160,6 +168,8 @@ Fail! But that was expected. Actually, when doing TDD, I always make sure to hav
 		for object in puzzle.objects:
 			moves += move(object)
 		return moves
+
+<div style="background-color: #cc3300">&nbsp;</div>
 	
 Seems like I am getting closer. Now I get 'xy' as the solution. And if the goat, the wolf and the cabbage were standing on catapults this would actually work but for our puzzle the farmer can only move an object if they are on the same side. This means we need to know on which side everyone (the objects and the farmer) is. Let's put this information into the dictionary `positions` which is indexed by the object (including the farmer) and has a boolean value indicating if the object is on the left side of the river (`True`) or on the right side (`False`). 
 
@@ -179,12 +189,16 @@ Seems like I am getting closer. Now I get 'xy' as the solution. And if the goat,
 		for object in puzzle.objects:
 			start[object] = True
 		return start
+
+<div style="background-color: #cc3300">&nbsp;</div>
 		
 I guess a coder in the true python spirit would write the second function as
 
 	:::python
 	def getStartPositions(puzzle):
 		return dict([(object, True) for object in [farmer] + puzzle.objects])
+
+<div style="background-color: #cc3300">&nbsp;</div>
 		
 Also, an object can only be moved when it's on the same side as the farmer.
 
@@ -196,6 +210,8 @@ Also, an object can only be moved when it's on the same side as the farmer.
 			return object
 		else:
 			return ''
+
+<div style="background-color: #cc3300">&nbsp;</div>
 	
 Let's run it... Seems like the farmer gets stuck on the right side. Let's give him the chance to go back without cargo.
 
@@ -205,6 +221,8 @@ Let's run it... Seems like the farmer gets stuck on the right side. Let's give h
 			positions[farmer] = not positions[farmer]
 			return '_'
 		[...]
+
+<div style="background-color: #cc3300">&nbsp;</div>
 		
 This means that we have to add `'_'` (nothing) to the list of objects that can be moved.
 
@@ -219,6 +237,8 @@ This means that we have to add `'_'` (nothing) to the list of objects that can b
 		
 	def getMovables(puzzle):
 		return puzzle.objects + ['_']
+
+<div style="background-color: #cc3300">&nbsp;</div>
 			
 Let's run it. Bummer. Now the first test fails. Seems like it doesn't know when to stop. And while we're at it, let's have the farmer make trips repeatedly until everybody is on the other side.
 
@@ -236,6 +256,8 @@ Let's run it. Bummer. Now the first test fails. Seems like it doesn't know when 
 
 	def getTargetPositions(puzzle):
 		return dict([(object, False) for object in [farmer] + puzzle.objects])
+
+<div style="background-color: green">&nbsp;</div>
 		
 Bingo! Both tests are passing. Next step: three objects.
 
@@ -245,12 +267,16 @@ Bingo! Both tests are passing. Next step: three objects.
 	puzzle.addObject('w')
 	puzzle.addObject('g')
 	assert solve(puzzle) == 'c_w_g'
+
+<div style="background-color: green">&nbsp;</div>
 	
 Something that works with two usually works with three as well (which is why software engineers count "zero, one, many") so I can already modify this test to make sure that the goat and the wolf are not left alone.
 
 	::python
 	puzzle.addConstraint('g', 'w')
 	assert solve(puzzle) == 'w_c_g'
+
+<div style="background-color: #cc3300">&nbsp;</div>
 	
 We can do this by checking for each move if the new constellation is "valid", meaning that no two objects that are unhealthy for each other are left alone on one side. So I change the inner loop of the `solve` function to
 
@@ -262,6 +288,8 @@ We can do this by checking for each move if the new constellation is "valid", me
 		
 		if positions == getTargetPositions(puzzle):
 			return moves
+
+<div style="background-color: #cc3300">&nbsp;</div>
 			
 If I run this now python reminds me that I need to define the `isValid` function. So I do her this favour.
 
@@ -272,6 +300,8 @@ If I run this now python reminds me that I need to define the `isValid` function
 			if positions[threat] == positions[victim] and not positions[farmer] == positions[threat]:
 				return False
 		return True
+
+<div style="background-color: #cc3300">&nbsp;</div>
 	
 Looks good enough. So I run it. And bam! Some weird thing went wrong. Debugging time. So I check the positions after the first move and see that the goat is still moved. Simply not registering the move is apparently not enough, I also need to undo it. Luckily in this puzzle, undoing means just doing the same move again.^^
 
@@ -280,11 +310,15 @@ Looks good enough. So I run it. And bam! Some weird thing went wrong. Debugging 
 		moves += nextMove
 	else:
 		move(object, positions)
+
+<div style="background-color: #cc3300">&nbsp;</div>
 		
 This should fix it. But the test still fails because the found solution is `w_cwg_w`. This is not what I expected but given the constraints, it's actually a valid solution albeit unnecessarily complicated. But finding the shortest solution is not a requirement so I just adapt the test to the reality.
 
 	:::python
 	assert solve(puzzle) == 'w_cwg_w'
+
+<div style="background-color: green">&nbsp;</div>
 	
 And finally all tests pass again. I'm not entirely happy with having to adapt the assertion so this might be something I would work on when I want to improve the algorithm. It turns out by changing the order of the objects to `['w', 'c', 'g']`, the solution would be indeed `w_c_g`. So I could look for the shortest solution systematically by trying every possible order. But yeah.. later.
 
@@ -298,6 +332,8 @@ Because we are still missing our final and original test.
 	puzzle.addConstraint('w', 'g')
 	puzzle.addConstraint('g', 'c')
 	assert solve(puzzle) == 'g_cgw_g'
+
+<div style="background-color: green">&nbsp;</div>
 	
 Since this is just a variation of what I have already implemented, the test passes right away and I realize that I'm done. Completely done. Done-done. And I have a nice little test suite to prove it which you can find [here][rivepuzzle.py].
 
