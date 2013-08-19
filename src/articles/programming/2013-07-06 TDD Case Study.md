@@ -339,7 +339,7 @@ Since this is just a variation of what I have already implemented, the test pass
 
 But of course I'm only done until I think of more features. I already mentioned the finding-the-shortest-solution idea but another one would be to detect if a puzzle does not have a solution or maybe it has one but only with a certain order of objects. So feel free to practice your TDD skills by teaching the solver some more tricks. A rather complete version in PHP can be found [here][phppuzzle].
 
-[riverpuzzle]: res/river_puzzle.py
+[riverpuzzle]: static/res/river_puzzle.py
 [phppuzzle]: https://github.com/rtens/riverpuzzle
 
 
