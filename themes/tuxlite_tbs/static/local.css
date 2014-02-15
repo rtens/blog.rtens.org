@@ -75,6 +75,7 @@ img.rounded {
 .social a[href*='digg.com']:before {content: url('./images/icons/digg.png');}
 .social a[href*='facebook.com']:before {content: url('./images/icons/facebook.png');}
 .social a[href*='github.com']:before {content: url('./images/icons/github.png');}
+.social a[href*='deviantart.com']:before {content: url('./images/icons/deviantart.png');}
 .social a[href*='gitorious.org']:before {content: url('./images/icons/gitorious.png');}
 .social a[href*='google.com/reader']:before {content: url('./images/icons/reader.png');}
 .social a[href*='jamendo.com']:before {content: url('./images/icons/jamendo.png');}
