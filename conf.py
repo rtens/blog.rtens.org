@@ -8,6 +8,7 @@ GOOGLE_ANALYTICS = 'UA-40634631-1'
 
 SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
           ('github', 'http://github.com/rtens'),
+          ('deviantart', 'http://nikolasalokin.deviantart.com'),
 		  ('email', 'mailto:blog@rtens.org'))
 
 SITEURL = 'http://blog.rtens.org'
