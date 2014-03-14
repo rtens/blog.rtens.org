@@ -62,7 +62,7 @@ img.rounded {
 }
 
 /* Article summary */
-.summary { margin-bottom: 4em; }
+.summary { margin-bottom: 1em; }
 .summary pre { display: none; }
 
 /* Styling for Sidebar */
