@@ -1,3 +1,5 @@
+Tags: TDD, php
+
 After [trying out live coding][small_steps] at the October meeting of the [Berlin PHP user group][bephpug] last year, I tasted blood. So I decided to repeat it with a more complex problem.
 
 At that point I remembered some articles discussing the [pros] and [cons] of TDD in the context of a [sudoku] solver. Seems like there is still [more to find][google] on this discussion. And I decided to join it.

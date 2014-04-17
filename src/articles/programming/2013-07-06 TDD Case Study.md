@@ -1,4 +1,4 @@
-Tags: TDD
+Tags: TDD, python
 
 I'm a big fan of [Test-Driven Development][tdd] and have been using it in almost all [projects] for a while now with astonishing results. If you are not convinced by TDD, drop me a [line] and I will do my best to change that. Although at first seemingly counter-intuitive, TDD quickly became as natural as me as camel-casing. But while showing it to fellow developers, I noticed how many only understand what test-driven means after having seen it in action. In this article I show how I implemented the solution for two exemplary problems with TDD step-by-step.
 
