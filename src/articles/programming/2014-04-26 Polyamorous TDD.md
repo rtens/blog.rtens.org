@@ -1,10 +1,10 @@
-Tags: tdd, clean code, php
+Tags: TDD, clean code, php
 
 Three things happened during the last week that each increased my urge to write this article. The coincidence is almost uncanny.
 
 * Monday: over the easter weekend I finally built a tool I've been meaning to build for over a year.
 * Tuesday: I became responsible for releasing and quality of my first [Ruby on Rails] project.
-* Wednesday: [David Heinemeier Hansson][dhh] wrote a controversial article about [TDD]
+* Wednesday: [David Heinemeier Hansson][dhh] wrote a [controversial article] about [TDD]
 
 The connections between these events are actually circular. 
 
@@ -16,6 +16,7 @@ Each of these events deserves it's own article. So I'll concentrate in this one 
 
 [Ruby on Rails]: http://rubyonrails.org/
 [dhh]: http://david.heinemeierhansson.com/
+[controversial article]: http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html
 [TDD]: http://c2.com/cgi/wiki?TestDrivenDevelopment
 
 
