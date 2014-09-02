@@ -1,0 +1,14 @@
+I was invited at this years [FrOSCon] to speak about executable documentation which is sort of follow-up to [last year][froscon8] where I spoke about [Specficiation by Example][sbe] (aka Behavior-Driven Development) and how to use automated tests to create a self-validating documentation of a software application. This year I approached the matter from the documentation side, transforming the documentation of [mockster] into an executable program (aka automated tests).
+
+[You can find the slides here][slides]. And for the first time, there is also a [video of this talk][video] availble.
+
+Anyway, I enjoyed a lot giving the talk, thanks to a very interested and engaging people listing who also gave some nice feedback. Thanks for that. I'm already looking forward to FrOSCon 2015.
+
+[FrOSCon]: https://www.froscon.de
+[froscon8]: http://blog.rtens.org/froscon-2013.html
+[sbe]: http://specificationbyexample.com/
+[mockster]: http://github.com/rtens/mockster
+[slides]: http://blog.rtens.org/category/static/res/executable_documentation_slides.pdf
+[video]: https://www.youtube.com/watch?v=5j42QvDMCjg
+[comment1]: https://twitter.com/raulfraile/status/503541717006835713
+[comment2]: https://twitter.com/gobilo/status/503607248447602689
