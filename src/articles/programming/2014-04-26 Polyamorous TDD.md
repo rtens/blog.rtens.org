@@ -52,7 +52,7 @@ So the most important question is: how do we achieve this level of trust? How ca
 
 For TDDlers it's almost trivial to answer the question if a programm *works as expected*. They write their expectations in code. So it works if all tests pass. Problem solved. But for non-programmers it's not that easy. Their expectations are intransparently translated into something they cannot understand. They only have the GUI.
 
-But as Uncle Bob states correctly, testing through the GUI is slow. Very slow if done manually, and still pretty slow but also very fragile if done automatically. It's fragile because the GUI changes way more than the *bahviour* of the software so GUI tests tend to give a lot of false positives and thus are maintanance heavy. The following graph shows my impression of how execution time increases with the level of integration.
+But as Uncle Bob states correctly, testing through the GUI is slow. Very slow if done manually, and still pretty slow but also very fragile if done automatically. It's fragile because the GUI changes way more than the *behaviour* of the software so GUI tests tend to give a lot of false positives and thus are maintanance heavy. The following graph shows my impression of how execution time increases with the level of integration.
 
 ![execution time over integration](static/res/testing/execution_time.png)
 
