@@ -1,1 +1,0 @@
-This one could be about how exactly I programmed the 6502 emulator
