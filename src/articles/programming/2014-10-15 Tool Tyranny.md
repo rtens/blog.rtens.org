@@ -24,4 +24,4 @@ But since (PHP) code is super ugly I *do* use a tool for browsing and presentati
 [gist]: https://gist.github.com/icambridge/7694d6d7b0a987f6c33b
 [dox]: http://dox.rtens.org
 [last]: http://blog.rtens.org/specification-by-example.html
-[video]: [shouldIt talk]: https://skillsmatter.com/skillscasts/5675-should-it-a-new-approach-to-bdd-pain-not-included
+[video]: https://skillsmatter.com/skillscasts/5675-should-it-a-new-approach-to-bdd-pain-not-included
