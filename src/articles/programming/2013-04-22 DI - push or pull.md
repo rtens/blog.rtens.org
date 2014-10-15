@@ -1,4 +1,4 @@
-Tags: testability
+Tags: TDD
 
 [Dependency Injection][di] is a must-have for testable code - and please write me if you are no convinced of testability. I even wrote my [own][factory] simple Dependency Injection Container recently out of pure joy on experimenting. But there is one tiny thing that I can't make up my mind about when using Dependency Injection. Should dependencies be pulled or pushed?
 

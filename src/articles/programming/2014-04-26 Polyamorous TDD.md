@@ -1,4 +1,4 @@
-Tags: TDD, clean code, php
+Tags: TDD, clean code, PHP
 
 Three things happened during the last week that each increased my urge to write this article. The coincidence is almost uncanny.
 

@@ -1,4 +1,4 @@
-Tags: clean code, php
+Tags: clean code, PHP
 
 While I'm not a fan of certifications and the sort, it's definitely helpful for a novice developer to have a scale to measure himself against. Something that answers the question "what do I need to learn?"
 
