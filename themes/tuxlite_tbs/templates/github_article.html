@@ -1,0 +1,3 @@
+{% if GITHUB_BLOG_URL %}
+Found typo or wanna add something? <a href="{{ GITHUB_BLOG_URL }}/tree/master/src/articles/{% if article.category != 'misc' %}{{ article.category }}/{% endif %}{{ article.date|lower|replace(' 00:00:00', '') }} {{ article.title }}.md">Edit me</a>
+{% endif %}
