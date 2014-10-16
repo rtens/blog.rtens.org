@@ -1,4 +1,4 @@
-Tags: TDD, php
+Tags: TDD, PHP
 
 At the [Berlin PHP user group][bephpug] last week I had two "firsts". It was my first time live-coding and I thought while I'm at it I could also do a "live" presentation on my hybrid [tablet/netbook][t500]. Both went surprisingly well. And thanks guys [for][comment1] [all][comment2] [your][comment3] [feedback][comment4].
 

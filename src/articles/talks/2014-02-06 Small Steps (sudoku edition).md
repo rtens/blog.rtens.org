@@ -1,4 +1,4 @@
-Tags: TDD, php
+Tags: TDD, PHP
 
 After [trying out live coding][small_steps] at the October meeting of the [Berlin PHP user group][bephpug] last year, I tasted blood. So I decided to repeat it with a more complex problem.
 
