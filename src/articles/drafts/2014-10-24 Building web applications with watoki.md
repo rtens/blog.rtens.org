@@ -1,6 +1,6 @@
 Status: draft
 
-I've been working on my **w**eb **a**application **to**ol **ki**t (short *watoki*) for a while now and thought if I ever want anybody besides me to use it, I better write a tutorial.
+I've been working on my Web Application TOol Kit (short *watoki*) for a while now and thought if I ever want anybody besides me to use it, I better write a tutorial.
 
 So here we go. Let's build a ... (drumm roll) ... *blog* application (because nobody has ever done that).
 
