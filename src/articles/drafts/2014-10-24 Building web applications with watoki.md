@@ -2,10 +2,13 @@ Status: draft
 
 I've been working on my Web Application TOol Kit (short *watoki*) for a while now and thought if I ever want anybody besides me to use it, I better write a tutorial.
 
+*watoki* is not a framework but a collection of libraries that provide common infrasctructure for web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrasctructure. Check out all the library [here][watoki].
+
 So here we go. Let's build a ... (drumm roll) ... *blog* application (because nobody has ever done that).
 
 You find the complete code of this application on [github][watoki-demo]. Some section titles link to the commit that contains the code changes of the sections.
 
+[watoki]: http://github.com/watoki
 [watoki-demo]: https://github.com/rtens/watoki-demo
 
 
