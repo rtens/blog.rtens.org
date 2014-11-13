@@ -25,7 +25,7 @@ Now for every new aricle we need to edit the `index.html` file as well which get
 
 ## PHP to the rescue ##
 
-In order to render the article list dynamically, we need a `index.php` file which reads files from the articles directory and the `index.html` to print them.
+In order to render the article list dynamically, we need an `index.php` to read files from the articles directory. And the `index.html` needs then to print them.
 
 	# index.php
 	$articles = glob('articles/*.html');
