@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Nikolas Martens'
-SITENAME = "Nikolas.M@rtens"
+SITENAME = "Blog | Nikolas.M@rtens"
 TIMEZONE = "Europe/Berlin"
 TWITTER_USERNAME = 'rtens_'
 GOOGLE_ANALYTICS = 'UA-40634631-1'
