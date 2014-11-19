@@ -2,20 +2,28 @@
 
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
-{% block content %}    
+{% block content %}
+
+<div class="intro article">
+    <h1 style="font-size: 6em; line-height: 100%" class="title">Hi there,</h1> I'm Nikolas Martens, freelancing
+    Software Engineer, and this is my blog. I hope it contains something interesting for you.
+    {# You can find more information about me <a href="http://rtens.org">on my homepage</a>. #}
+    Enjoy the read!
+</div>
 
 {% if articles %}
-{% for article in articles_page.object_list %}        
+{% for article in articles_page.object_list %}
 
-    <div class='article'>
-        <a href="{{ SITEURL }}/{{ article.url }}"><h2 class="title">{{ article.title }}</h2></a>
-        {% include "metadata.html" %}
-        <div class="summary">{{ article.summary }} <a class="btn btn-primary xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
-    </div>
-				
-    {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
-        {% include 'pagination.html' %}
-    {% endif %}
+<div class='article'>
+    <a href="{{ SITEURL }}/{{ article.url }}"><h2 class="title">{{ article.title }}</h2></a>
+    {% include "metadata.html" %}
+    <div class="summary">{{ article.summary }} <a class="btn btn-primary xsmall" href="{{ SITEURL }}/{{ article.url }}">read
+        more</a></div>
+</div>
+
+{% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
+{% include 'pagination.html' %}
+{% endif %}
 
 {% endfor %} {# For article #}
 {% endif %} {# If articles #}
