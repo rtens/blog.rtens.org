@@ -1,8 +1,8 @@
 Status: draft
 
-I've been working on my [**w**eb **a**pplication **to**ol kit][watoki] (short *watoki*) for about a year now and thought if I ever want anybody besides me to use it, I better write a tutorial.
+I've been working for about a year now on a project named [**w**eb **a**pplication **to**ol **ki**t][watoki] (short *watoki*) and thought if I ever want anybody besides me to use it, I better write about how.
 
-*watoki* is not a framework but a collection of libraries that provide infrasctructure commonly needed by web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrastructure. Check out all the libraries [here][watoki].
+*watoki* is not a framework but a collection of libraries that provide infrastructure commonly needed by web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrastructure. Check out all the libraries [here][watoki].
 
 So here we go. Let's build a ... (drum roll) ... *blog* application (because nobody has ever done that). We're gonna take a very light-weight approach and then reduce maintenance cost by using a rendering and web delivery library. So only two libraries are treated but it should be enough to get you started.
 
