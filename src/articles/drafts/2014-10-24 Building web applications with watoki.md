@@ -260,7 +260,7 @@ The comments work great but we receive so many that adding them to each article 
 The first step is to strip the article files of all non-content HTML and put that into a template.
 
 	#article.html
-	<a href="index.php"><< Overview</a>
+	<a href="index.php">Overview</a>
 
 	<h1 property="title">Building Web Applications with watoki</h1>
 	<h4 property="date">Tue 13 December 2011</h4>
