@@ -2,11 +2,11 @@ Status: draft
 
 I've been working for about a year now on a project named [**w**eb **a**pplication **to**ol **ki**t][watoki] (short *watoki*) and thought if I ever want anybody besides me to use it, I better write about how.
 
-*watoki* is not a framework but a collection of libraries that provide infrastructure commonly needed by web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrastructure. Check out all the libraries [here][watoki].
+*watoki* a collection of libraries that provide infrastructure commonly needed by web applications - think loosely couple web framework. The goal of each library is to be as lightweight as possible and to make it easy for the client code to stay independent of the infrastructure. You can find an overview of all the libraries [here][watoki].
 
-So here we go. Let's build a ... (drum roll) ... *blog* application (because nobody has ever done that). We're gonna take a very light-weight approach and then reduce maintenance cost by using a rendering and web delivery library. So only two libraries are treated but it should be enough to get you started.
+So in this article I would like to give you a step-by-step guide of how I would a simple web application with this tool kit. So here we go. Let's build a ... (drum roll) ... *blog* application (because nobody has ever done that). We're gonna take a very light-weight approach and then reduce maintenance cost by using a rendering and web delivery library. So in the end only two libraries are presented here but it should be enough to get you started.
 
-You find the complete code of this application on [github][watoki-demo]. Some sections titles link to the commit that contains the code changes of the sections so you can browse the entire code at that state and play around with it.
+You find the complete code of this application on [github][watoki-demo]. The section titles link to the commit that contains the code changes of the sections so you can browse the entire code at that state and play around with it.
 
 [watoki]: http://github.com/watoki
 [watoki-demo]: https://github.com/rtens/demo-blog
@@ -14,26 +14,26 @@ You find the complete code of this application on [github][watoki-demo]. Some se
 
 ## [Starting Small](https://github.com/rtens/demo-blog/tree/01761ba184a3922e647d804fe5c878198bafcb01) ##
 
-Since we are all hip and lean and agile, let's build an MVP version (Minimal Viable Product, *not* Most Valuable Player) of our blog. Here is the entire directory structure:
+Since we are all hip and lean and agile, let's build an MVP version (Minimal Viable Product, *not* Most Valuable Player) of our blog consisting of an overview and a single article. Here is the entire directory structure:
 
 	demo-blog
 	|- index.html
 	'- articles
 	   '- 2011-12-13__watoki_tutorial.html
 
-That's pretty minimal (and ugly). But it works and we can put it online and people can read it and that's what counts.
+That's pretty minimal (and ugly, visually). But it works and we can put it online and people can read it and that's what counts.
 
-Now if we want to write another article, we'd have to
+Now if I want to write another article, we'd have to
 
 1. copy the last article and change its content
 2. add it to the `index.html`
 
-The second step gets annoying pretty quickly especially if I forget to do it and then wonder why nobody read about my newest epiphany. But we can use computer technology to fix this.
+The second step gets annoying pretty quickly especially if I forget to do it and then wonder why nobody reads about my newest epiphany. But we can use computer technology to fix this.
 
 
 ## [PHP to the rescue](https://github.com/rtens/demo-blog/tree/e448998d9c562ec84d313e362fed0156a624c14d) ##
 
-(Did I mention that *watoki* uses PHP? I hope you are not disappointed now that I didn't opt for a more trendy language. But PHP isn't actually half bad. So deal with it.)
+(Did I mention that *watoki* is written in PHP? I hope you are not disappointed now that I didn't opt for a more trendy language. But PHP isn't actually half bad. So deal with it.)
 
 It would be nice if we could just read the files in `articles` and print them as a list. In order to do so, we need an `index.php` to read the files and the `index.html` to print them.
 
@@ -52,12 +52,12 @@ We can test it locally with the built-in web server of PHP. Just execute the fol
 
 	$ php -S localhost:8000
 
-I did this because I want to demonstrate that a lot of times, you don't even need any library or much PHP code to build a minimal version of a product. Much can be faked for the sake of speed - at the cost of maintanance though.
+I started with this as-simple-as-possible version because I want to demonstrate that a lot of times, you don't even need any library or much PHP code to build a minimal version of a product. Much can be faked for the sake of speed - at the cost of maintanance though.
 
 
 ## [Getting rid of PHP](https://github.com/rtens/demo-blog/tree/6035cca8dd7f1ca8f77662957571c109272ebf89) ##
 
-After our last change, the front end designer of the project complains that he can't edit the HTML files any more because there are weird question mark and dollar symbols everywhere. So now we can either install PHP on his machine and teach him how to use it or we could think think of a smarter way to render a list dynamically. What if we could just write
+After our last change, the front end designer of the project complains that he can't edit the HTML files any more because there are weird question marks and dollar symbols everywhere. So now we can either install PHP on his machine and teach him how to use it or we could think think of a smarter way to render a list dynamically. What if we could just write
 
 	# index.html
 	<ul>
@@ -79,11 +79,11 @@ Well, that's almost exactly what we're gonna do, except we have to give some hin
 		</li>
 	</ul>
 
-That's some more HTML than before but it still renders as it should when the file is opened in a browser. In order to actually render our dynamic list, we need to install our first library: a rendering engine. There are two in *watoki* but the one that does the neat HTML trick is [tempan] which is short for *Template Animation*. Installing it is a breeze thanks to [composer]. Just open your favourite console at the project's root folder and enter the following (make sure that `composer` is installed and in your `$PATH`)
+That's some more HTML than before but it still renders as it should when the file is opened in a browser. In order to actually render our dynamic list, we need to install our first library: a rendering engine. There are two in *watoki* but the one that does the neat HTML trick is [tempan] which is short for *Template Animation*. Installing it is a breeze thanks to [composer]. Just open your favourite console at the project's root folder and execute the following command (make sure that `composer` is installed and in your `$PATH`)
 
 	$ composer require watoki/tempan
 	
-And now we need to get our `index.php` to build a proper *View Model* (with keys matching the `property` values of the template) and render the template using *tempan*
+And now we need to get our `index.php` to build a proper *View Model* (an array with keys matching the `property` values of the template) and render the template using *tempan*
 
 	# index.php
 	require_once 'vendor/autoload.php';
@@ -117,7 +117,7 @@ Now we feel a lot better since we separated logic from presentation. All data ma
 
 ## [Cleaning up](https://github.com/rtens/demo-blog/tree/55332545c10ecafa62b52d6e896c66962795c657) ##
 
-But soon the code doesn't look that beautiful any more, since it's all thrown together in one file. And it's also not at all testable. So let's structure it a bit better by putting the code a class.
+But soon the code doesn't look that beautiful any more, since it's all thrown together in one file. And it's also not at all testable. So let's structure it a bit better by putting the code in a class.
 	
 	#index.php
 	require_once 'vendor/autoload.php';
@@ -139,7 +139,7 @@ But soon the code doesn't look that beautiful any more, since it's all thrown to
 	$resource = new IndexResource();
 	echo $resource->respond();
 	
-and that class needs to have its own file of course. So here is our new folder structure
+and that class better lives in its own file of course. So here is our new folder structure
 
 	demo-blog
 	|- index.php
@@ -177,7 +177,7 @@ If we run application now, it'll complain that `IndexResource` needs to implemen
 		// ...
 	}
 	
-The `Responding` interface defines a method `respond` which receives a `Request` object from *curir*. We can use it to get information about the request, for example the request method or the value of a `page` parameter in case the list in paginated.
+The `Responding` interface defines a method `respond` which receives a `Request` object from *curir*. We can use it to get information about the request, for example the request method or the value of a `page` parameter in case the list is paginated.
 
 	#IndexResource.php/IndexResource
 	
@@ -207,7 +207,7 @@ But since resources almost always respond to a certain method with certain param
 		// ...
 	}
 	
-*curir* maps the request to a resource to a method names `do<HTTP_METHOD>` and the returned value is used as data for the renderer which uses a file with the same name as the resource as template (in this case `index.html`). The default renderer is the `PhpRenderer` so we need to tell curir to use *tempan*.
+*curir* maps the request to a resource to a method named `do<HTTP_METHOD>` and the returned value is used as data for the renderer which uses a file with the same name as the resource as template (in this case `index.html`). The default renderer is the `PhpRenderer` so we need to tell curir to use *tempan*.
 
 	#index.php
 	$factory = WebDelivery::init(new TempanRenderer());
@@ -216,7 +216,7 @@ But since resources almost always respond to a certain method with certain param
 	
 ## [Talk to me](https://github.com/rtens/demo-blog/tree/cc8b8159c946ec4a79224fb051eeac78921ad6bb) ##
 
-The blog is a roaring success and tons of people read it but more and more would also be able to comment on the articles. So we add a comment form to each article and point it to the `index.php`.
+The blog is a roaring success and tons of people read it but more and more would like to be able to comment on the articles. So we add a comment form to each article and point it to the `index.php`.
 
 	#2011-12-13__watoki_tutorial.html
 	<hr>
@@ -304,22 +304,24 @@ The last thing we need to do is adapt the links in the overview list so they poi
 		'title' => str_replace(['_', '.html'], ' ', $title)
 	];
 
-Since we don't want requests to be delivered to the static article files any more (which now only contain the content of each article), we need to put `WebDelivery` in charge of all requests. We can do this by passing `index.php` to the web server as "routing file" (or using `mod_rewrite` with *Apache*).
+Lastly, we need to put `WebDelivery` in charge of all requests so it can them to the dynamic resources. We can do this by passing `index.php` to the web server as "routing file" (or using `mod_rewrite` with *Apache*).
 
 	$ php -S localhost:8000 index.php
 	
-To keep this tutorial short, I'm not gonna describe how to display comments, but you can find it in the [source code] or try to do it as an exercise.
+To keep this tutorial short, I'm not gonna describe how to display the comments, but you can find it in the [source code] or try to do it as an exercise.
 	
 [source code]: https://github.com/rtens/demo-blog/tree/84e01ef1e1fa8909275301165c40509c4be2032c
 
 
 ## [Link Reanimation](https://github.com/rtens/demo-blog/tree/5137eadc067f04bd01e42a79a706006d9371f26d) ##
 
-Everything seems to be working well until we realise that all links to our articles that we tweeted about are now broken. Because articles now have the URLs `article.html?article=foo` instead of `articles/foo.html`. We have to find a way to map the latter to the former.
+Everything seems to be working well until we realise that all links to our articles that we sent to our friends and proudly tweeted about are now broken. Because articles now have the URLs `article.html?article=foo` instead of `articles/foo.html`. We have to find a way to map the latter to the former.
 
-As almost always, there are multiple ways that achieve the same result. For example we could do the re-routing on web server level (e.g. with `mod_rewrite`) but let's say if we want to do it in the application so we can stay environment-independent.
+As almost always, there are multiple ways to achieve one goal. For example we could do the re-routing on web server level (e.g. with `mod_rewrite`) but let's say that we want to do it in the application so we can stay environment-independent.
 
-A design goal in all the *watoki* libraries was to avoid "magic" without compromising too much convenience. This is achieved by always keeping things *discoverable*. This of course works best if you are using an IDE that supports code navigation (like [PhpStorm] - sorry Sublimers) so you can jump to a method definition by simply clicking on it. This means you can use the following approach for answering most questions of the form "How can I change X?" in *watoki*. So while reading the following explanation, try to follow it by retracing the described paths in the actual code.
+A design goal in all the *watoki* libraries was to avoid "magic" without compromising convenience. This is achieved by always keeping things *discoverable* but offering short-cuts for the most common use cases. This of course works best if you are using an IDE that supports code navigation (like [PhpStorm] - sorry Sublimers) so you can jump to a symbol definition by simply clicking on it. 
+
+You can use the following approach for answering most questions of the form "How can I change X?" in all libraries of *watoki*. I suggest that, while reading the following explanation, to try retracing the described paths in the actual code.
 
 That said, let's try to find out how *curir* routes requests so we can change it. We made sure that all requests are handled by `index.php` where we call `WebDelivery::quickResponse()`, but what happens next? With a little digging, we'll find that the call leads to the following code being executed.
 
@@ -332,7 +334,7 @@ That said, let's try to find out how *curir* routes requests so we can change it
 	$delivery = new WebDelivery($router, $builder, $deliverer);
     $delivery->run();
 
-The `WebDelivery` is instantiated with a `Router`, a `RequestBuilder` and a `ResponseDeliverer`, so a request is built, routed to its target, and the response delivered. The router is this case does nothing (hence `**None**Router`) and its target is a `RespondingTarget` whose `respond()` method simply invokes the `respond()` method of the *root* resource, in our case `IndexResource`. So in order to change the routing behaviour, we could exchange that `NoneRouter` with our own, configured version. By looking at sub-classes of `Router` we see a class called `DynamicRouter` which turns out to be just what we need. The result would look like this.
+The `WebDelivery` is instantiated with a `Router`, a `RequestBuilder` and a `ResponseDeliverer`, so a request is built, routed to its target, and the response delivered. The router is this case does nothing (hence **None**Router) and its target is a `RespondingTarget` whose `respond()` method simply invokes the `respond()` method of the *root* resource, in our case `IndexResource`. So in order to change the routing behaviour, we could exchange that `NoneRouter` with our own, configured version. By looking at sub-classes of `Router` we see a class called `DynamicRouter` which turns out to be just what we need. The result would look like this.
 
 	#index.php
 	$factory = WebDelivery::init(new TempanRenderer());
@@ -380,4 +382,4 @@ Now we get an "500 Internal Server Error" since *curir* catches all errors (incl
 
 ## Le Fin ##
 
-So this is how you build a basic web application with *[watoki]*, or more precisely with *[curir]* and *[tempan]*. Of course this tutorial only covers a tiny part of the mentioned libraries and an even smaller part of the whole tool kit. So if you would like to give any of these libraries a try or have any comment or feedback, just drop me a line. It's always appreciated.
+So this is how you build a basic web application with *[watoki]*, or more precisely with *[curir]* and *[tempan]*. Of course this tutorial only covers a tiny part of the mentioned libraries and an even smaller part of the whole tool kit. So if you would like to give any of these libraries a try or have any comment or feedback, just drop me a line. I always appreciate any feedback.
