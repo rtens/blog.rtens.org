@@ -1,5 +1,3 @@
-Status: draft
-
 I've been working for about a year now on a project named [**w**eb **a**pplication **to**ol **ki**t][watoki] (short *watoki*) and thought if I ever want anybody besides me to use it, I better write about how.
 
 *watoki* a collection of libraries that provide infrastructure commonly needed by web applications - think loosely couple web framework. The goal of each library is to be as lightweight as possible and to make it easy for the client code to stay independent of the infrastructure. You can find an overview of all the libraries [here][watoki].
