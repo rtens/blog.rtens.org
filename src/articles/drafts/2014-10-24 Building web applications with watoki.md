@@ -1,10 +1,10 @@
 Status: draft
 
-I've been working on my **w**eb **a**pplication **to**ol Kit (short *watoki*) for about a year now and thought if I ever want anybody besides me to use it, I better write a tutorial.
+I've been working on my [**w**eb **a**pplication **to**ol kit][watoki] (short *watoki*) for about a year now and thought if I ever want anybody besides me to use it, I better write a tutorial.
 
-*watoki* is not a framework but a collection of libraries that provide infrasctructure commonly needed by web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrasctructure. Check out all the librar [here][watoki].
+*watoki* is not a framework but a collection of libraries that provide infrasctructure commonly needed by web applications. The goal of each library is to be as lightweight as possible and making it easy for the client code to stay independent of the infrastructure. Check out all the libraries [here][watoki].
 
-So here we go. Let's build a ... (drumm roll) ... *blog* application (because nobody has ever done that). We're gonna take a very light-weight approach and then reduce maintanance cost by using a rendering and web delivery library. So only two libraries are treated but it should be enough to get you started.
+So here we go. Let's build a ... (drum roll) ... *blog* application (because nobody has ever done that). We're gonna take a very light-weight approach and then reduce maintenance cost by using a rendering and web delivery library. So only two libraries are treated but it should be enough to get you started.
 
 You find the complete code of this application on [github][watoki-demo]. Some sections titles link to the commit that contains the code changes of the sections so you can browse the entire code at that state and play around with it.
 
@@ -57,7 +57,7 @@ I did this because I want to demonstrate that a lot of times, you don't even nee
 
 ## [Getting rid of PHP](https://github.com/rtens/demo-blog/tree/6035cca8dd7f1ca8f77662957571c109272ebf89) ##
 
-After our last change, the front end designer of the project complains that he can't edit the HTML files anymore because there are weird questionmark and dollar symbols everywhere. So now we can either install PHP on his machine and teach him how to use it or we could think think of a smarter way to render a list dynamically. What if we could just write
+After our last change, the front end designer of the project complains that he can't edit the HTML files any more because there are weird question mark and dollar symbols everywhere. So now we can either install PHP on his machine and teach him how to use it or we could think think of a smarter way to render a list dynamically. What if we could just write
 
 	# index.html
 	<ul>
@@ -117,7 +117,7 @@ Now we feel a lot better since we separated logic from presentation. All data ma
 
 ## [Cleaning up](https://github.com/rtens/demo-blog/tree/55332545c10ecafa62b52d6e896c66962795c657) ##
 
-But soon the code doesn't look that beautiful anymore, since it's all thrown together in one file. And it's also not at all testable. So let's structure it a bit better by putting the code a class.
+But soon the code doesn't look that beautiful any more, since it's all thrown together in one file. And it's also not at all testable. So let's structure it a bit better by putting the code a class.
 	
 	#index.php
 	require_once 'vendor/autoload.php';
@@ -190,7 +190,7 @@ The `Responding` interface defines a method `respond` which receives a `Request`
 [curir]: http://github.com/watoki/curir
 
 
-## [Easier Delivery](https://github.com/rtens/demo-blog/tree/) ##
+## [Easier Delivery](https://github.com/rtens/demo-blog/tree/da0fcf69f1b5580c64ce9f8dfbc4b0d29a144018) ##
 
 But since resources almost always respond to a certain method with certain parameters and then render a template using structured data, *curir* provides an easier way to do that. By extending `Container`, we can replace the `respond` method with the following
 
@@ -243,7 +243,7 @@ This works, but we don't see the message yet because we need to add it to the te
 	#index.html
 	<h4 property="message">[...]</h4>
 	
-If we now would like to email the comment to ourself, we need to access the submitted data. Since *curir* maps the request parameter to the method signatur, we can simply do this:
+If we now would like to email the comment to ourself, we need to access the submitted data. Since *curir* maps the request parameter to the method signature, we can simply do this:
 
 	#IndexResource.php/IndexResource
 	
@@ -319,7 +319,7 @@ Everything seems to be working well until we realise that all links to our artic
 
 As almost always, there are multiple ways that achieve the same result. For example we could do the re-routing on web server level (e.g. with `mod_rewrite`) but let's say if we want to do it in the application so we can stay environment-independent.
 
-A design goal in all the *watoki* libraries was to avoid "magic" without compromising too much convenience. This is achieved by always keeping things *discoverable*. This of course works best if you are using an IDE that supports code navigation (like PHPStorm - sorry Sublimers) so you can jump to a method definition by simply clicking on it. This means you can use the following approach for answering most questions of the form "How can I change X?" in *watoki*. So while reading the following explanation, try to follow it by retracing the described paths in the actual code.
+A design goal in all the *watoki* libraries was to avoid "magic" without compromising too much convenience. This is achieved by always keeping things *discoverable*. This of course works best if you are using an IDE that supports code navigation (like [PhpStorm] - sorry Sublimers) so you can jump to a method definition by simply clicking on it. This means you can use the following approach for answering most questions of the form "How can I change X?" in *watoki*. So while reading the following explanation, try to follow it by retracing the described paths in the actual code.
 
 That said, let's try to find out how *curir* routes requests so we can change it. We made sure that all requests are handled by `index.php` where we call `WebDelivery::quickResponse()`, but what happens next? With a little digging, we'll find that the call leads to the following code being executed.
 
@@ -353,6 +353,8 @@ This works! But of course there is also another way (which is usually easier and
         $router->addObjectPath('articles/{article}', ArticleResource::class, $this->factory);
         return new MultiRouter([$router, parent::createRouter()]);
     }
+	
+[PhpStorm]: https://www.jetbrains.com/phpstorm/
 		
 	
 ## [Article Not Found](https://github.com/rtens/demo-blog/tree/88824984e45008e4342c7132a95d93ed6c685d6b) ##
@@ -378,4 +380,4 @@ Now we get an "500 Internal Server Error" since *curir* catches all errors (incl
 
 ## Le Fin ##
 
-So this is how you build a basic web application with *watoki*, or more precisely with *curir* and *tempan*. Of course this tutorial only covers a tiny part of the mentioned libraries and an even smaller part of the whole tool kit. So if you would like to give any of these libraries a try or have any comment or feedback, just drop me a line. It's always appreciated.
+So this is how you build a basic web application with *[watoki]*, or more precisely with *[curir]* and *[tempan]*. Of course this tutorial only covers a tiny part of the mentioned libraries and an even smaller part of the whole tool kit. So if you would like to give any of these libraries a try or have any comment or feedback, just drop me a line. It's always appreciated.
