@@ -12,7 +12,7 @@ As far I understood it, Chris' main point is that "Coding is not the fundamental
 
 In fact I would like to use the definition that [Wikipedia] claims the term's meaning has been expanded to.
 
-	*The ability to [...] understand and use the dominant symbol systems of a culture.*
+> The ability to [...] understand and use the dominant symbol systems of a culture.
 
 So it's really about about decoding (understand) and encoding (use) thoughts with symbols. Hence coding *is* a form of literacy. It's just not well suited for most kind of thoughts and I think that's where Chris' pain is coming from. But maybe I'm projecting since this is also my pain. But more on that later.	
 	
@@ -44,7 +44,7 @@ This was decades ago. But still, ["the computer revolution hasn't happened yet."
 
 I really want to make this clear: being able to write down your thoughts not as static words, but as dynamic (breathing) software is fundamentally different and exponentially more powerful. It's not only externalizing thoughts, but *thinking*. Or in Chris' words:
 
-	*To put it simply, the next great advance in human ability comes from being able to externalize the mental models we spend our entire lives creating.*
+> To put it simply, the next great advance in human ability comes from being able to externalize the mental models we spend our entire lives creating.
 	
 The analogy to writing words is quite compelling. Just like writing down thoughts forces you to put them into words and thus clarify them, encoding a dynamic model forces you to think about it on a whole different level. A big part of my job as a software engineer is picking the brains of so-called *domain experts*. People who usually know very well how a something works, but most times this knowledge is implicit. My job is then to make it explicit enough to be able to encode it in the programming language of my choice.
 
