@@ -1,0 +1,8 @@
+Last weekend I had the extraordinary pleasure of presenting my talk on [Template Animation][tempan] at the [Dutch PHP Conference][dpc]. If you happened to attend: thanks for showing up although it was the first slot after the social event =) and also: I'd appreciate your [feedback].
+
+The conference was extremely well organized, and I especially enjoyed the presentation by Ross Tuck on how [Awesome Command Busses]. Also, having two extra days for exploring Amsterdam turned out to be the best idea I had all year. Hope to be there again next year.
+
+[tempan]: http://github.com/watoki/tempan
+[dpc]: http://www.phpconference.nl/
+[feedback]: http://joind.in/talk/view/14237
+[Awesome Command Busses]: http://joind.in/talk/view/14219
