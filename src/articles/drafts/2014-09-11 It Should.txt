@@ -1,0 +1,4 @@
+Tags: BDD, TDD
+
+[shouldIt talk]: https://skillsmatter.com/skillscasts/5675-should-it-a-new-approach-to-bdd-pain-not-included
+[Richard McIntyre]: http://mackstar.com/
