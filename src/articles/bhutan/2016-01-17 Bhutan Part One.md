@@ -28,7 +28,7 @@ The first couple of days I spent setting-up my working environment. A new countr
 
 ![20160111_151327.jpg](static/img/bhutan/20160111_151327.jpg)
 
-My sister and her husband rent the top floor of a cute little house up in the hills above the some 50 thousand people strong capital *Thimphu*. The spare room on the left of the entrance is where I'm staying.
+My sister and her husband rent the top floor of a cute little house up in the hills above the 100 thousand people strong capital *Thimphu*. The spare room on the left of the entrance is where I'm staying. Since street names - if existing - don't matter and there are no house numbers, my new address is "Yellow house, Upper Motithang, above the traffic circle, near Peaceful Resort, Thimphu, Bhutan".
 
 What I unterestimated is how could ten degrees can be if you only have mobile radiators and almost no insulation. And it took a couple of cold nights until I realized that it takes a sleeping bag plus four blankets to keep me warm and asleep.
 
@@ -63,7 +63,7 @@ So in the end our proposal was "Deputy" - a service to help people with their ca
 
 ## Going South
 
-The following week we made a trip to the very south of the country. The 220km on windy, only party tarred roads took us over 8 hours. But the views made it worth while.
+The following week we made a trip to the very south of the country. The 220km on windy, only partly tarred roads took us over 8 hours. But the views made it worth while.
 
 ![20160112_113922.jpg](static/img/bhutan/20160112_113922.jpg)
 
