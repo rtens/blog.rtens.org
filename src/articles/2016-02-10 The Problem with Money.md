@@ -65,11 +65,13 @@ A more detailed description of the system including algorithms to issue, transfe
 
 ## Resources
 
-- CommunityForge.net/en
-- complementarycurrency.org
-- irta.com
-- cc-literature.de
-- socialtrade.org
-- qoin.org
-- regiogeld.de
-- openmoney.org
+More resources on complementary currencies can be found here
+
+- [CommunityForge](http://CommunityForge.net/en)
+- [ComplementaryCurrency.org](http://complementarycurrency.org)
+- [IRTA](http://irta.com)
+- [Complementary Currency Literature](http://cc-literature.de)
+- [STRO](http://socialtrade.org)
+- [QOIN](qoin.org)
+- [RegioGeld e.V.](http://regiogeld.de)
+- [OpenMoney](http://openmoney.org)
