@@ -50,7 +50,7 @@ I discovered that there are [hundreds of complementary currencies][list], some f
 [WIR Bank]: http://www.wir.ch
 [People Money]: http://www.lietaer.com/writings/books/people-money/
 
-## GroupCash
+## Groupcash
 
 Since I still wanted to solve the online-payment problem, physical cash was not an option and setting up a central bank for community money would require a licence which was apparently hard to get. What I needed was a system that combines the de-centralized features of a cryptographic currency with the community-building properties of a local currency. In such a system, transactions could be done directly without relying on a third party by trusting eachother, every user would be in control of its own account, and could even print its own cash if needed.
 
@@ -68,6 +68,7 @@ A more detailed description of the system including algorithms to issue, transfe
 
 More information and resources on complementary currencies can be found here
 
+- [Groupcash Project Page](http://groupcash.org)
 - [Complementary Currency Resource Center](http://complementarycurrency.org)
 - [Complementary Currency Literature](http://cc-literature.de)
 - [CommunityForge](http://CommunityForge.net/en) - Open-source tools
