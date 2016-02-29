@@ -11,7 +11,7 @@ Found typo or wanna add something?
 .gh-btn:hover .gh-ico,.gh-btn:focus .gh-ico,.gh-btn:active .gh-ico{background-position:-14px 0}
 </style>
 <a class="gh-btn" 
-  href="{{ GITHUB_BLOG_URL }}/tree/master/src/articles/{% if article.category != 'misc' %}{{ article.category }}/{% endif %}{{ article.date|lower|replace(' 00:00:00', '') }} {{ article.title }}
+  href="{{ GITHUB_BLOG_URL }}/tree/master/src/articles/{% if article.category is not 'misc' %}{{ article.category }}/{% endif %}{{ article.date|lower|replace(' 00:00:00', '') }} {{ article.title }}
 .md"
   target="_blank"><span class="gh-ico"></span> <span class="gh-text" id="gh-text">Edit me</span></a>
 {% endif %}
