@@ -61,7 +61,7 @@ So although there is a single entity regulating the issuing, it cannot issue uni
 A more detailed description of the system including algorithms to issue, transfer and validate units can be found [here][whitepaper]. I also implemented these algorithms in a [PHP library] and intend to create a web application that can be used to easily set-up a local currency community. Peer-to-peer and mobile applications will follow once the system is proven to be useful.
 
 [groupcash]: https://github.com/groupcash/
-[whitepaper]: https://github.com/groupcash/core/blob/master/README.md
+[whitepaper]: https://github.com/groupcash/core/
 [PHP library]: https://github.com/groupcash/php/
 
 ## Resources
