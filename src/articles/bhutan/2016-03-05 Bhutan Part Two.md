@@ -49,7 +49,7 @@ Driving here requires some serious getting used to. Traffic rules are pretty muc
 
 But at least in the city most streets are paved. Windiness plus potholes reduce the cruising speed on country roads to an average of about 40 km/h, turning even small distances into a day trip. It's funny how the perspective changes though. While going five hours from Berlin to Munich seems like a major trip back home, spending eight hours on a bumpy road seems like a minor thing here like when we went to Gelephu last month.
 
-So I wasn't too opposed of taking the car to the far east to visit Mountain Hazelnuts although it's about 16 hours to Bumthang and then another 6 to the headquarters in Limnithang. But I also didn't mind to exchange that 16 hours on a bumpy road for 35 minutes in the air. Although it felt a little bit like cheating. But the view from the plane was incredible.
+So I wasn't too opposed of taking the car to the far east to visit Mountain Hazelnuts although it's about 16 hours to Bumthang and then another 6 to the headquarters in Lingmethang. But I also didn't mind to exchange that 16 hours on a bumpy road for 35 minutes in the air. Although it felt a little bit like cheating. But the view from the plane was incredible.
 
 And I got plenty of road adventure. From Bumthang you we had to cross a 4000m high pass. Including snowy roads, steep cliffs and no railings. And at almost the very top, the driver suddenly stops and steps outside. Curiously I follow him and find him look at a flat tire. That wouldn't have been a problem hadn't the spare wheel been flat as well. So we had no other option than to walk to the next village and wait almost 3 hours for another car to pick us up. But the Naja was good.
 
