@@ -85,3 +85,4 @@ img.rounded {
 .social a[href*='stackoverflow.com']:before {content: url('./images/icons/stackoverflow.png');}
 .social a[href*='twitter.com']:before {content: url('./images/icons/twitter.png');}
 .social a[href*='mailto:']:before {content: url('./images/icons/email.png');}
+.social a[href*='rtens.org']:before {content: url('./images/icons/web.png');}

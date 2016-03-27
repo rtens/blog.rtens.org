@@ -11,6 +11,7 @@ GITHUB_BLOG_URL = "https://github.com/rtens/blog.rtens.org"
 SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
           ('github', 'http://github.com/rtens'),
           ('deviantart', 'http://nikolasalokin.deviantart.com'),
+          ('web', 'http://rtens.org'),
 		  ('email', 'mailto:blog@rtens.org'))
 
 SITEURL = 'http://blog.rtens.org'
