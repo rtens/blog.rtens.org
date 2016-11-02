@@ -1,3 +1,5 @@
+Tags: Bhutan
+
 Somehow I thought that time would slow down a bit if I move to such a different place. But it didn't. Not a bit. A third of my time in Bhutan is already over - 121 days to go, 61 down.
 
 So I guess it's about time that I update this little travel log with what I've been doing the last days. One thing is clear: I enjoyed every single one of it.

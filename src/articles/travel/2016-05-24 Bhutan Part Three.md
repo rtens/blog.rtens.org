@@ -1,4 +1,5 @@
 Status: draft
+Tags: Bhutan
 
 So what happened since last time? aka beginning of March
 
@@ -15,3 +16,5 @@ So what happened since last time? aka beginning of March
 - Druk Path
 - Dagala
 - Phajoding to Buddha Point
+
+First picture is 20160317_145705.jpg

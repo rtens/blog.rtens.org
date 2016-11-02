@@ -1,3 +1,5 @@
+Tags: Bhutan
+
 Two weeks ago, I packed my bags, got on a plane and flew to the small kingdom Bhutan in south-east Asia, where I'm gonna stay for the next six months. So mostly for keeping track of my time here myself, I want to [write about it][category] every once in a while. Hope you enjoy.
 
 [category]: http://blog.rtens.org/category/bhutan.html
