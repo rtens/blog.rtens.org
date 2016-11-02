@@ -8,7 +8,7 @@ Only little more than a month to go. Time for an update. I'll try to make this o
 
 So what's been going on in the big small city? Well for once there have been a couple of more forest fires. One was so bad that I couldn't bike home that evening because the smog was to thick.
 
-![Smog of nearby forest fire](static/img/bhutan/20160317_145705.jpg)
+![Smog of nearby forest fire](/static/img/bhutan/20160317_145705.jpg)
 
 And the three of us (that's my sister, my brother in-law and me) actually started Dzongkha lessons. That's the official language of Bhutan, besides English. That's definitely the most exotic language I'll ever learn with around 400k users. That if you don't count Latin which of course has close to zero users.
 
@@ -18,7 +18,7 @@ This creates a pretty mixed-up day-to-day communication. If two Bhutanese talk t
 
 So twice a week the three of us sit in this very nice looking classroom in the Dzongkha Learning Center and listen to our *lopen*. There are no books on grammar and no consistent spelling of words, at least with the Latin alphabet. So it's a little bit tricky but none the less big fun since the classes consist mostly of our quite old and very experienced teacher telling us about his life and how life in Bhutan is in general. SO it's as much a social class as it is a language class since protocol plays an important role here.
 
-![Our classroom](static/img/bhutan/20160311_090254.jpg)
+![Our classroom](/static/img/bhutan/20160311_090254.jpg)
 
 
 ### Trips
@@ -27,22 +27,22 @@ End of march was one of the largest festivals of the year in Paro. Allegedly it'
 
 I went with a friend and stayed at his girlfriend's parents' house which was quite the experience it itself but the festival was really something. But let pictures speak.
 
-![Paro tsechu](static/img/bhutan/20160320_130533.jpg)
+![Paro tsechu](/static/img/bhutan/20160320_130533.jpg)
 
-![My own Gho](static/img/bhutan/20160320_165544.jpg)
+![My own Gho](/static/img/bhutan/20160320_165544.jpg)
 
 
 A couple of days later I was on my way to Paro again. This time with a sleeping bag in my luggage. My destination was the new Happy Chips potato-farm-to-be a little north of Paro, just underneath the ruins of the Drukgyal Dzong. 
 
 For three days I helped Farmer Sangay and the rest of the Happy Chips gang to prepare the fields for plantation. First order of business: build picks. The rest of the days was spent clearing the fields from rocks and weed and digging a pool to wash the potatoes in. On the last evening we soaked in a hot stone bath which took four hours to get hot enough because none of us had a really good idea of how to heat stones.
 
-![Our self-made picks](static/img/bhutan/20160325_152633.jpg)
+![Our self-made picks](/static/img/bhutan/20160325_152633.jpg)
 
-![Digging the pool](static/img/bhutan/20160324_122219.jpg)
+![Digging the pool](/static/img/bhutan/20160324_122219.jpg)
 
-![Clearing the irigation channel to fill the pool](static/img/bhutan/20160324_161355.jpg)
+![Clearing the irigation channel to fill the pool](/static/img/bhutan/20160324_161355.jpg)
 
-![Morning view](static/img/bhutan/20160326_072237.jpg)
+![Morning view](/static/img/bhutan/20160326_072237.jpg)
 
 
 ### Garizompa
@@ -73,4 +73,4 @@ For three days I helped Farmer Sangay and the rest of the Happy Chips gang to pr
 
 ## Visit at RMA
 
-![](static/img/bhutan/.jpg)
+![](/static/img/bhutan/.jpg)
