@@ -47,9 +47,9 @@ For three days I helped Farmer Sangay and the rest of the Happy Chips gang to pr
 
 ### Garizompa
 
-## Potato farm
+### Potato farm
 
-## Etho Meto festival
+### Etho Meto festival
 
 
 ## Hikes
@@ -63,14 +63,14 @@ For three days I helped Farmer Sangay and the rest of the Happy Chips gang to pr
 ### Hike to chotom
 
 
-### Projects
+## Projects
 
-## movies.bt
+### movies.bt
 
-## Groupcash workshop
+### Groupcash workshop
 
-## Visit at CSOA
+### Visit at CSOA
 
-## Visit at RMA
+### Visit at RMA
 
 ![](/static/img/bhutan/.jpg)
