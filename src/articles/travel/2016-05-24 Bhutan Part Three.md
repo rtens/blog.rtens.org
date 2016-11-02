@@ -3,6 +3,10 @@ Tags: Bhutan
 
 Only little more than a month to go. Time for an update. I'll try to make this one quick.
 
+This article is part of a series. Check out the [other ones] if you haven't yet.
+
+[other ones]: http://blog.rtens.org/tag/bhutan.html
+
 
 ## Thimphu
 
