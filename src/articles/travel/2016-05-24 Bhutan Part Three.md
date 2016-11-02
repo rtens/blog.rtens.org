@@ -4,7 +4,7 @@ Tags: Bhutan
 Only little more than a month to go. Time for an update. I'll try to make this one quick.
 
 
-### Thimphu
+## Thimphu
 
 So what's been going on in the big small city? Well for once there have been a couple of more forest fires. One was so bad that I couldn't bike home that evening because the smog was to thick.
 
