@@ -4,6 +4,10 @@ Somehow I thought that time would slow down a bit if I move to such a different 
 
 So I guess it's about time that I update this little travel log with what I've been doing the last days. One thing is clear: I enjoyed every single one of it.
 
+This article is part of a series. Check out the [other ones] if you haven't yet.
+
+[other ones]: http://blog.rtens.org/tag/bhutan.html
+
 ![20160120_151606.jpg](static/img/bhutan/20160120_151606.jpg)
 
 ## Some Hikes
