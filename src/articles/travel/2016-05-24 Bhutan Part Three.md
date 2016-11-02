@@ -21,7 +21,7 @@ So twice a week the three of us sit in this very nice looking classroom in the D
 ![Our classroom](/static/img/bhutan/20160311_090254.jpg)
 
 
-### Trips
+## Trips
 
 End of march was one of the largest festivals of the year in Paro. Allegedly it's also the *posh one* where everybody dresses up the best they can and it's all about see and be seen. So of course we all dressed up including my little niece and I bought a Gho (the traditional garmet) for the occasion.
 
