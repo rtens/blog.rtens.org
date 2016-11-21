@@ -47,11 +47,11 @@ What we have created is an Educational Debt. Too many people lack the essential 
 
 And I'm not talking about reading or maths skills here or a knowledge or historic events. The skills that a democratic citizen needs and that I haven't seen on any curriculum yet are
 
-- being compassionate
-- having a constructive discussion
-- exercising critical thinking
-- applying the scientific method
-- avoiding cognitive biases
+- **being compassionate** - VR lets you literally *walk in someone else's moccasins*
+- **having a constructive discussion** - teach that a discussion is not about *winning* but about collaborative discovery
+- **exercising critical thinking** stop teaching *right answers* and ask students to challenge common believes
+- **applying the scientific method** read and discuss studies
+- **avoiding cognitive biases** - see [Thinking Fast and Slow]
 
 So instead of fighting the ignorants and their followers, let's put our energy towards creating a better education for the next generation but also for the current ones. Let's rethink if curricula with arbitrary standardized learning achievements are really the best way to motivate people. Let's reconsider if stuffing people into groups solely by their birth year is the best environment for them to learn. And let's find out if we can create something better that static, linear media to express and explore their ideas in.
 
@@ -59,3 +59,5 @@ So instead of fighting the ignorants and their followers, let's put our energy t
 > -- David W. Orr
 
 We need a new kind of education. And we need it soon.
+
+[Thinking Fast and Slow]: https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow
