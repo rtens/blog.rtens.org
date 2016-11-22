@@ -22,6 +22,8 @@ Every single one of these points make me cringe.
 
 A frightening thought for me is that there might be only a handful of people in the world that feel this way. So maybe in the end it'll turn out that I'm the wrong-way driver who thinks every body else is driving in the wrong direction.
 
+But better ideas have been around since the 60s/70s. If you want to see a modern adoption of one of them, have a look at [lovely kernels].
+
 [manifesto]: https://github.com/zells/core/blob/master/manifesto.md
 [video]: https://www.youtube.com/watch?v=i5qpS_D8Law
 [treehouse]: https://teamtreehouse.com/
