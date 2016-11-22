@@ -9,6 +9,7 @@ I'm not exactly sure what the video is trying to do. It certainly doesn't try ve
 I think a lot of people will agree with the contents of the video that this is *just the way it is* and they might even think that's a good thing. To me, the video shows almost every ten seconds something that is **terribly wrong** about the way things are.
 
 It's things like 
+
 - having to chose a platform and device format up-front.
 - Being completely locked-in on iOS regarding hardware and software.
 - Depending of the approval of some company for what you are allowed to share with the world.
