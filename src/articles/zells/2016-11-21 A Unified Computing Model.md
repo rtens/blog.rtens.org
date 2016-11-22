@@ -1,6 +1,6 @@
 status: draft
 
-I propose a computing model that is compatible with every existing or conceivable model
+I propose a computing model names *Qi* that is compatible with every existing or conceivable model
 
 ## Usages
 
@@ -9,13 +9,15 @@ Translator between any two software platforms
 
 ## Properties
 
+*cells*
+
 ### Composable
 
 path, child, parent ^, root °
 
 ### Dynamic
 
-reaction, frame #, message @, message send, deliver
+reaction, frame #, message @, message send
 
 ### Concurrent
 
