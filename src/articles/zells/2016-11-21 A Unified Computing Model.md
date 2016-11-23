@@ -9,23 +9,131 @@ Translator between any two software platforms
 
 ## Properties
 
-*cells*
+The model consist of a *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cell*. The semantics of the model are defined by these properties.
 
 ### Composable
 
-path, child, parent ^, root °
+A cell can contain any number of other cells as children. Each *child* has name that is unique amongst its siblings. 
+
+    Child := <symbol>*
+
+This form a tree where each cell is a node and can therefore be addressed by a *path* containing the *names* of each cell between the source and destination.
+   
+    Path := Name*
+    Name := Child
+
+To move up in the tree, a name can also refer to the *parent* or the *root* of the tree.
+
+    Name := Name|<parent>|<root>
+   
+#### Example
+    
+Given the following tree structure
+
+          °
+         / \
+        A   B
+        |   |
+        C   D
+     
+The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separates two names. A path from `C` to `D` would be `^.^.B.D` where `^` denotes the parent.
 
 ### Dynamic
 
-reaction, frame #, message @, message send
+A cell may have a *reaction* which is executed every time the cell receives a *message* in the form of a cell path.
+
+    Message := Path
+    
+A reaction consists of any number of *message sends* which define the path of the *receiver* cell and the message.
+
+    Reaction := MessageSend*
+    MessageSend := Receiver Message
+    Receiver := Path
+    
+Paths in a reaction can also refer to the received *message* and the the execution *frame*. Frames are cells which are implicitly created for every execution to provide an execution-specific space.
+    
+    Name := Name|<message>|<frame>
+    
+#### Example    
+
+Given the following cell structure.
+    
+           °
+         / | \  
+        A  B  C
+           |
+           D
+           
+The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
+    
+    °.C °.B
+    
+In its reaction, `C` creates a new cell `E` in the frame (denoted as `#`) and sends it to the child `D` of the received message, which is `B`, so to `°.B.D`.
+    
+    (create #.E)
+    @.D #.E
+    
+The resulting structure is the following. Note that the frame cell has an automatically generated unique name.
+        
+           °
+         / | \  
+        A  B  C
+           |  |
+           D  a1fd5a
+              |
+              E
+              
+Hence the message that `D` received is `^.^.C.a1fd5a.E`
+
 
 ### Concurrent
 
-delivery, data flow synchronization
+All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message repeatedly. This way, data flow can be synchronized without requiring a fixed order of execution. Hence that messages may be sent to cells possibly before they exist.
+
+#### Example
+
+When calculating `2 * 3 + 4 * 5`, the summation has to wait for both factors to complete calculation. The following diagram illustrates the case where the calculation of `2*3` is delayed. 
+     
+    a = 2*3       ##
+    b = 4*5  ##
+    c = a+b  ~~~~~~~###
+             ----------->t
+             
+The summation waits (denoted by `~`) until the calculation of both factors is completed.
 
 ### Abstractable
 
-stem, inheritance, adoption
+Every cell has a *stem* cell from which it inherits both its reaction and children. Each inherited child and the reaction can be replaced by the *specialized* cell.
+
+If an inherited cell is modified, it will be *adopted* by its parent by creating a new child with the formerly inherited cell as its stem.
+
+#### Example
+
+Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C` (denoted as lower-case `c`). 
+        
+        A<--B
+        ¦   |
+        C   c
+      
+If a message is sent to `B.C`, the reaction of `A.C` is executed in the *context* of `B.C` which means all relative paths will be resolved starting at `B.C`. 
+
+If `A.C` has a child `D`, it is inherited as well.
+    
+        A<--B
+        ¦   |
+        C   c
+        ¦   |
+        D   d
+
+If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `B.C.D` are adopted, with `°.A.C` and `°.A.C.D` as stem cells respectively.
+    
+        A<--B
+        |   |
+        C<--C
+        |   |
+        D<--D
+            |
+            E
 
 ### Distributed
 
