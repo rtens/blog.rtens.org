@@ -11,25 +11,26 @@ Translator between any two software platforms
 
 The model consist of a *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cell*. The semantics of the model are defined by these properties.
 
+
 ### Composable
 
 A cell can contain any number of other cells as children. Each *child* has name that is unique amongst its siblings. 
 
 ```text
-Child := <symbol>*
+Child := <symbol>+
 ```
 
 This form a tree where each cell is a node and can therefore be addressed by a *path* containing the *names* of each cell between the source and destination.
    
 ```text
-Path := Name*
+Path := Name+
 Name := Child
 ```
 
 A name can also refer to the current node *itself* and to move up in the tree, a can refer to the *parent* or the *root* of the tree.
 
 ```text
-Name := Name|<self>|<parent>|<root>
+Name := ..|<self>|<parent>|<root>
 ```
    
 #### Example
@@ -45,6 +46,8 @@ Given the following tree structure
 ```
      
 The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separates two names. A path from `C` to `D` would be `^.^.B.D` where `^` denotes the parent.
+
+
 
 ### Dynamic
 
@@ -65,7 +68,7 @@ Receiver := Path
 Paths in a reaction can also refer to the received *message* and the the execution *frame*. Frames are cells which are implicitly created for every execution to provide an execution-specific space.
     
 ```text
-Name := Name|<message>|<frame>
+Name := ..|<message>|<frame>
 ```
     
 #### Example    
@@ -86,7 +89,7 @@ The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
 °.C °.B
 ```
     
-In its reaction, `C` creates a new cell `E` in the frame (denoted as `#`) and sends it to the child `D` of the received message, which is `B`, so to `°.B.D`.
+In its reaction, `C` creates a new cell `E` in the frame (denoted by `#`) and sends it to the child `D` of the received message (denoted by `@`), which is `B`, so to `°.B.D`.
     
 ```text
 (create #.E)
@@ -108,6 +111,7 @@ The resulting structure is the following. Note that the frame cell has an automa
 Hence the message that `D` received is `^.^.C.a1fd5a.E`
 
 
+
 ### Concurrent
 
 All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message repeatedly. This way, data flow can be synchronized without requiring a fixed order of execution. Hence that messages may be sent to cells possibly before they exist.
@@ -125,19 +129,21 @@ c = a+b  ~~~~~~~###
              
 The summation waits (denoted by `~`) until the calculation of both factors is completed.
 
+
+
 ### Abstractable
 
 Every cell has a *stem* cell from which it inherits both its reaction and children. Each inherited child and the reaction can be replaced by the *specialized* cell. In order to send a message to an overwritten cell or execute and overwritten reaction, a path may contain names referring to the *stem* of a cell.
 
 ```text
-Name := Name|<stem>
+Name := ..|<stem>
 ```
 
 If an inherited cell is modified, it will be *adopted* by its parent by creating a new child with the formerly inherited cell as its stem.
 
 #### Example
 
-Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C` (denoted as lower-case `c`). 
+Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C` (denoted by lower-case `c`). 
         
 ```text
     A<--B
@@ -168,6 +174,8 @@ If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `
         |
         E
 ```
+
+
 
 ### Distributed
 
