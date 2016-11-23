@@ -26,10 +26,10 @@ Path := Name*
 Name := Child
 ```
 
-To move up in the tree, a name can also refer to the *parent* or the *root* of the tree.
+A name can also refer to the current node *itself* and to move up in the tree, a can refer to the *parent* or the *root* of the tree.
 
 ```text
-Name := Name|<parent>|<root>
+Name := Name|<self>|<parent>|<root>
 ```
    
 #### Example
@@ -127,7 +127,11 @@ The summation waits (denoted by `~`) until the calculation of both factors is co
 
 ### Abstractable
 
-Every cell has a *stem* cell from which it inherits both its reaction and children. Each inherited child and the reaction can be replaced by the *specialized* cell.
+Every cell has a *stem* cell from which it inherits both its reaction and children. Each inherited child and the reaction can be replaced by the *specialized* cell. In order to send a message to an overwritten cell or execute and overwritten reaction, a path may contain names referring to the *stem* of a cell.
+
+```text
+Name := Name|<stem>
+```
 
 If an inherited cell is modified, it will be *adopted* by its parent by creating a new child with the formerly inherited cell as its stem.
 
