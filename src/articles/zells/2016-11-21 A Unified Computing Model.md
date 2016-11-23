@@ -15,16 +15,22 @@ The model consist of a *composable*, *dynamic*, *concurrent*, *abstractable* and
 
 A cell can contain any number of other cells as children. Each *child* has name that is unique amongst its siblings. 
 
-    Child := <symbol>*
+```text
+Child := <symbol>*
+```
 
 This form a tree where each cell is a node and can therefore be addressed by a *path* containing the *names* of each cell between the source and destination.
    
-    Path := Name*
-    Name := Child
+```text
+Path := Name*
+Name := Child
+```
 
 To move up in the tree, a name can also refer to the *parent* or the *root* of the tree.
 
-    Name := Name|<parent>|<root>
+```text
+Name := Name|<parent>|<root>
+```
    
 #### Example
     
@@ -44,46 +50,60 @@ The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separa
 
 A cell may have a *reaction* which is executed every time the cell receives a *message* in the form of a cell path.
 
-    Message := Path
+```text
+Message := Path
+```
     
 A reaction consists of any number of *message sends* which define the path of the *receiver* cell and the message.
 
-    Reaction := MessageSend*
-    MessageSend := Receiver Message
-    Receiver := Path
+```text
+Reaction := MessageSend*
+MessageSend := Receiver Message
+Receiver := Path
+```
     
 Paths in a reaction can also refer to the received *message* and the the execution *frame*. Frames are cells which are implicitly created for every execution to provide an execution-specific space.
     
-    Name := Name|<message>|<frame>
+```text
+Name := Name|<message>|<frame>
+```
     
 #### Example    
 
 Given the following cell structure.
     
-           °
-         / | \  
-        A  B  C
-           |
-           D
+```text
+       °
+     / | \  
+    A  B  C
+       |
+       D
+```
            
 The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
     
-    °.C °.B
+```text
+°.C °.B
+```
     
 In its reaction, `C` creates a new cell `E` in the frame (denoted as `#`) and sends it to the child `D` of the received message, which is `B`, so to `°.B.D`.
     
-    (create #.E)
-    @.D #.E
+```text
+(create #.E)
+@.D #.E
+```
     
 The resulting structure is the following. Note that the frame cell has an automatically generated unique name.
         
-           °
-         / | \  
-        A  B  C
-           |  |
-           D  a1fd5a
-              |
-              E
+```text
+       °
+     / | \  
+    A  B  C
+       |  |
+       D  a1fd5a
+          |
+          E
+```
               
 Hence the message that `D` received is `^.^.C.a1fd5a.E`
 
@@ -96,10 +116,12 @@ All messages of a reaction are sent *concurrently*. Each message is sent by a *m
 
 When calculating `2 * 3 + 4 * 5`, the summation has to wait for both factors to complete calculation. The following diagram illustrates the case where the calculation of `2*3` is delayed. 
      
-    a = 2*3       ##
-    b = 4*5  ##
-    c = a+b  ~~~~~~~###
-             ----------->t
+```text
+a = 2*3       ##
+b = 4*5  ##
+c = a+b  ~~~~~~~###
+         ----------->t
+```
              
 The summation waits (denoted by `~`) until the calculation of both factors is completed.
 
@@ -113,29 +135,35 @@ If an inherited cell is modified, it will be *adopted* by its parent by creating
 
 Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C` (denoted as lower-case `c`). 
         
-        A<--B
-        ¦   |
-        C   c
+```text
+    A<--B
+    ¦   |
+    C   c
+```
       
 If a message is sent to `B.C`, the reaction of `A.C` is executed in the *context* of `B.C` which means all relative paths will be resolved starting at `B.C`. 
 
 If `A.C` has a child `D`, it is inherited as well.
     
-        A<--B
-        ¦   |
-        C   c
-        ¦   |
-        D   d
+```text
+    A<--B
+    ¦   |
+    C   c
+    ¦   |
+    D   d
+```
 
 If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `B.C.D` are adopted, with `°.A.C` and `°.A.C.D` as stem cells respectively.
     
-        A<--B
-        |   |
-        C<--C
-        |   |
-        D<--D
-            |
-            E
+```text
+    A<--B
+    |   |
+    C<--C
+    |   |
+    D<--D
+        |
+        E
+```
 
 ### Distributed
 
