@@ -30,11 +30,13 @@ To move up in the tree, a name can also refer to the *parent* or the *root* of t
     
 Given the following tree structure
 
-          °
-         / \
-        A   B
-        |   |
-        C   D
+```text
+      °
+     / \
+    A   B
+    |   |
+    C   D
+```
      
 The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separates two names. A path from `C` to `D` would be `^.^.B.D` where `^` denotes the parent.
 
