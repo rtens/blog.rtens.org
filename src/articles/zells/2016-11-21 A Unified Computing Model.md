@@ -1,15 +1,52 @@
 status: draft
 
-I propose a computing model names *Qi* that is compatible with every existing or conceivable model
+In 1963, while working at the Advanced Research Project Agency, J.C.R. Licklider wrote in his [Memorandum to the *Members and Affiliates of the Intergalatic Computer Network*][memo]
 
-## Usages
+> At this extreme, the problem is esentially the one discussed by science fiction writers: "how do you get communications started among totally uncorrelated "sapient" beings?"
 
-Translator between any two software platforms
-=> meta language for "communicating with aliens"
+[Alan Kay calls this][kay1] the *communicating with aliens* problem. Licklider continues:
+
+> But, I should not like to make an extreme assumption about the uncorrelatedness. (I am willing to make an extreme assupmtion about the sapience.)
+
+Licklider's "Intergalatic Computer Network" became the "ARPANet" which in turn became the "Internet", which quite well fullfils his vision of connecting every single person on the planet.
+
+In the context of the internet, the aliens are two independently computer programs and the problem is how to get them talking to eachother. Since Licklider allows us to soften the *uncorrelatedness* requirement, we can assume that indeed we can get them to speak the same language, albeit it won't be the native language of either. How shouod this language look like?
+
+[memo]: tbd
+[kay1]: tbd
+
+
+## Current State
+
+The "language of the Internet" is the Inernet Protocol stack (IP with TCP and UDP), which allows one program on the internet to talk to any other program. But it only specifies *how* they can talk to each other, not *what* they can talk about or how to discover what the other one talks about.
+
+It's the air, lungs and ears but it doesn't specify how meaning can be discovered. I can certainly *speak* to any other human on the planet that is close enough. And they can *hear* me, but that doesn't mean they *understand* me or that I can *talk* with them. This is the state that IP stack leaves us with.
+
+The most universal meaningful language of the internet is the WorldWideWeb. It specifies how things can be addressed (with URIs/URLs) and how these resources can present themselves (in HTML). It provides meaning by specifying what you can do with these resources, such as "post" and "get". And most importantly it defines how communication is done (with HTTP).
+
+The result is a *computing model* that turned out to be quite useful for accessing static documents but really not a good fit for doing anything more interesting and over the last decades many million man-hours have been poured into mitigating its design flaws.
+
+Sso I very much agree with Alan Kay that ["the browser was very badly designed"][kay2] because it "does too much and not enough at the same time". I think what he means by that is that there are way too many primitives in HTML which all have to be interpreted (doing too much) but it's not extensible (not enough). The second critique point also goes for HTTP which has a fixed number of *verbs* which just don't fit in many situations. But the worst design flaw is in HTTP which assumes that all communication is initiated by the client and no state is preserved in the server.
+
+How could be do this better?
+
+[kay2]: tbd
+
+
+## Proposal
+
+I propose to design a protocol based on a computing model that is the ultimate abstraction of all existing and conceivable models and is thus compatible with all of them. I call this model [Qi].
+
+This model could be used as a meta-language to create a meaningful but extensible vocabulary. Two uncorrelated services could use this model to discover each others capabilities and use the vocabulary to transfer meaning. The model would also be used to transfer not only data between services but also dynamic behaviour without the need to manual translation of either.
+
+It would enable communicating with aliens.
+
+[Qi]: tbd
+
 
 ## Properties
 
-The model consist of a *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cell*. The semantics of the model are defined by these properties.
+The model consists of a *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cells*. The semantics of the model are defined by these properties.
 
 
 ### Composable
@@ -44,7 +81,7 @@ Given the following tree structure
     |   |
     C   D
 ```
-     
+
 The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separates two names. A path from `C` to `D` would be `^.^.B.D` where `^` denotes the parent.
 
 
@@ -56,7 +93,7 @@ A cell may have a *reaction* which is executed every time the cell receives a *m
 ```text
 Message := Path
 ```
-    
+
 A reaction consists of any number of *message sends* which define the path of the *receiver* cell and the message.
 
 ```text
@@ -64,17 +101,17 @@ Reaction := MessageSend*
 MessageSend := Receiver Message
 Receiver := Path
 ```
-    
+
 Paths in a reaction can also refer to the received *message* and the the execution *frame*. Frames are cells which are implicitly created for every execution to provide an execution-specific space.
-    
+
 ```text
 Name := ..|<message>|<frame>
 ```
-    
-#### Example    
+
+#### Example
 
 Given the following cell structure.
-    
+
 ```text
        °
      / | \  
@@ -82,22 +119,22 @@ Given the following cell structure.
        |
        D
 ```
-           
+
 The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
-    
+
 ```text
 °.C °.B
 ```
-    
+
 In its reaction, `C` creates a new cell `E` in the frame (denoted by `#`) and sends it to the child `D` of the received message (denoted by `@`), which is `B`, so to `°.B.D`.
-    
+
 ```text
 (create #.E)
 @.D #.E
 ```
-    
+
 The resulting structure is the following. Note that the frame cell has an automatically generated unique name.
-        
+
 ```text
        °
      / | \  
@@ -107,7 +144,7 @@ The resulting structure is the following. Note that the frame cell has an automa
           |
           E
 ```
-              
+
 Hence the message that `D` received is `^.^.C.a1fd5a.E`
 
 
@@ -119,14 +156,14 @@ All messages of a reaction are sent *concurrently*. Each message is sent by a *m
 #### Example
 
 When calculating `2 * 3 + 4 * 5`, the summation has to wait for both factors to complete calculation. The following diagram illustrates the case where the calculation of `2*3` is delayed. 
-     
+
 ```text
 a = 2*3       ##
 b = 4*5  ##
 c = a+b  ~~~~~~~###
          ----------->t
 ```
-             
+
 The summation waits (denoted by `~`) until the calculation of both factors is completed.
 
 
