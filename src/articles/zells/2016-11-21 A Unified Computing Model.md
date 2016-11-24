@@ -179,4 +179,28 @@ If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `
 
 ### Distributed
 
-peers, protocol (deliver,received,failed,join,leave,ok)
+A cell can be distributed over multiple processes and machines. A cell is connected to its *peer* by sending it a *join* signal with the connection parameters. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal 
+
+#### Example
+
+Given a cell `A` in the process with the ID `111`.
+
+```text
+      111
+    +-----+
+    |     |
+    |  A  |
+    |     |
+    +-----+
+```
+
+If a new process (with the ID `222`) is created that contains also cell `A`, the signal `join A 222` is sent to process `111`. This adds a unidirectional connection from the cell in `111` to its peer at `222`.
+
+```text
+      111        222
+    +-----+    +-----+
+    |     |    |     |
+    |  A~~~~~~~~~>A  |
+    |     |    |     |
+    +-----+    +-----+
+```
