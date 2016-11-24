@@ -1,36 +1,36 @@
 status: draft
 
-In 1963, while working at the Advanced Research Project Agency, J.C.R. Licklider wrote in his [Memorandum to the *Members and Affiliates of the Intergalatic Computer Network*][memo]
+In 1963, while working at the Advanced Research Project Agency, J.C.R. Licklider wrote in his [Memorandum to the *Members and Affiliates of the Intergalatic Computer Network*][memo]:
 
-> At this extreme, the problem is esentially the one discussed by science fiction writers: "how do you get communications started among totally uncorrelated "sapient" beings?"
+> At this extreme, the problem is essentially the one discussed by science fiction writers: "how do you get communications started among totally uncorrelated "sapient" beings?"
 
-[Alan Kay calls this][kay1] the *communicating with aliens* problem. Licklider continues:
+[Alan Kay referred to this][kay1] as the *communicating with aliens problem*. Licklider continues:
 
-> But, I should not like to make an extreme assumption about the uncorrelatedness. (I am willing to make an extreme assupmtion about the sapience.)
+> But, I should not like to make an extreme assumption about the uncorrelatedness. (I am willing to make an extreme assumption about the sapience.)
 
-Licklider's "Intergalatic Computer Network" became the "ARPANet" which in turn became the "Internet", which quite well fullfils his vision of connecting every single person on the planet.
+Licklider's "Intergalatic Computer Network" became the "ARPANET" which in turn became the "Internet", which quite well fulfills his vision of connecting every single person on the planet.
 
-In the context of the internet, the aliens are two independently computer programs and the problem is how to get them talking to eachother. Since Licklider allows us to soften the *uncorrelatedness* requirement, we can assume that indeed we can get them to speak the same language, albeit it won't be the native language of either. How shouod this language look like?
+In the context of the Internet, the aliens are two independently developed computer programs and the problem is how to get them talking to each other. Since Licklider allows us to soften the *uncorrelatedness* requirement, we can assume that there exists a common language language that both services know how to speak, albeit it won't be the native language of either. How should this language look like?
 
-[memo]: tbd
-[kay1]: tbd
+[memo]: http://worrydream.com/refs/Licklider-IntergalacticNetwork.pdf
+[kay1]: https://vimeo.com/22463791
 
 
 ## Current State
 
-The "language of the Internet" is the Inernet Protocol stack (IP with TCP and UDP), which allows one program on the internet to talk to any other program. But it only specifies *how* they can talk to each other, not *what* they can talk about or how to discover what the other one talks about.
+The "language of the Internet" is the Internet Protocol stack (TCP/IP), which allows one program on the internet to talk to any other program. But it only specifies *how* they can talk to each other, not *what* they can talk about or how to discover what the other one talks about.
 
-It's the air, lungs and ears but it doesn't specify how meaning can be discovered. I can certainly *speak* to any other human on the planet that is close enough. And they can *hear* me, but that doesn't mean they *understand* me or that I can *talk* with them. This is the state that IP stack leaves us with.
+It's analogous to the air, lungs and ears but it doesn't specify how meaning can be discovered. Given enough air, I can certainly *speak* to any other human on the planet that is close by. And they can probably *hear* me, but that doesn't mean they *understand* me or that I can *talk* with them. This is the state that the IP stack leaves us with.
 
-The most universal meaningful language of the internet is the WorldWideWeb. It specifies how things can be addressed (with URIs/URLs) and how these resources can present themselves (in HTML). It provides meaning by specifying what you can do with these resources, such as "post" and "get". And most importantly it defines how communication is done (with HTTP).
+The most universal *meaningful* language of the internet is the WorldWideWeb. It specifies how things can be addressed (with URIs/URLs) and how these things can present themselves (with HTML). It provides meaning by specifying what you can do with these resources (such as "post" and "get"). And most importantly it defines how communication is done (with HTTP).
 
-The result is a *computing model* that turned out to be quite useful for accessing static documents but really not a good fit for doing anything more interesting and over the last decades many million man-hours have been poured into mitigating its design flaws.
+The result is a *computing model* that turned out to be quite useful for accessing static documents but really not a good fit for doing anything more interesting. And over the last decades many million of man-hours have been poured into mitigating its design flaws.
 
-Sso I very much agree with Alan Kay that ["the browser was very badly designed"][kay2] because it "does too much and not enough at the same time". I think what he means by that is that there are way too many primitives in HTML which all have to be interpreted (doing too much) but it's not extensible (not enough). The second critique point also goes for HTTP which has a fixed number of *verbs* which just don't fit in many situations. But the worst design flaw is in HTTP which assumes that all communication is initiated by the client and no state is preserved in the server.
+I very much agree with Alan Kay that "HTML has gone back to the dark ages and is one of the worst ideas since MS-DOS", as he said in [one of his most iconic talks in 1997][kay2], and that it "reinvented the flat tire". I also remember him saying once that the web-browser "does too much and not enough". I think what he means is that there are way too many primitives in HTML which all have to be interpreted (doing too much) but it's not at all extensible (not enough). The second critique point also goes for HTTP which has a fixed number of *verbs* which just don't fit in many situations. But the worst design flaw is in HTTP, which assumes that all communication is initiated by the client and no state is preserved in the server.
 
-How could be do this better?
+How could we do this better?
 
-[kay2]: tbd
+[kay2]: https://youtu.be/oKg1hTOQXoY?t=1421
 
 
 ## Proposal
@@ -41,12 +41,12 @@ This model could be used as a meta-language to create a meaningful but extensibl
 
 It would enable communicating with aliens.
 
-[Qi]: tbd
+[Qi]: https://en.wikipedia.org/wiki/Qi
 
 
 ## Properties
 
-The model consists of a *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cells*. The semantics of the model are defined by these properties.
+The model consists of *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cells*. The semantics of the model are defined by these properties.
 
 
 ### Composable
