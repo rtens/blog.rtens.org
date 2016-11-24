@@ -35,7 +35,7 @@ How could we do this better?
 
 ## Proposal
 
-I propose to design a protocol based on a computing model that is the ultimate abstraction of all existing and conceivable models and is thus compatible with all of them. I call this model [Qi].
+I propose to design a protocol based on a computing model that is the ultimate abstraction of all existing and conceivable models and is thus compatible with all of them. I would like to call this model [Qi] which mean "breath" and "air" but also "energy flow".
 
 This model could be used as a meta-language to create a meaningful but extensible vocabulary. Two uncorrelated services could use this model to discover each others capabilities and use the vocabulary to transfer meaning. The model would also be used to transfer not only data between services but also dynamic behaviour without the need to manual translation of either.
 
