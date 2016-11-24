@@ -57,14 +57,14 @@ A cell can contain any number of other cells as children. Each *child* has name 
 Child := <symbol>+
 ```
 
-This form a tree where each cell is a node and can therefore be addressed by a *path* containing the *names* of each cell between the source and destination.
+This forms a tree where each cell is a node and can therefore be addressed by a *path* containing the *names* of each child cell.
    
 ```text
 Path := Name+
 Name := Child
 ```
 
-A name can also refer to the current node *itself* and to move up in the tree, a can refer to the *parent* or the *root* of the tree.
+A name can also refer to the current node it*self* and the *parent* (to move up in the tree) as well as the *root* of the tree.
 
 ```text
 Name := ..|<self>|<parent>|<root>
@@ -94,7 +94,7 @@ A cell may have a *reaction* which is executed every time the cell receives a *m
 Message := Path
 ```
 
-A reaction consists of any number of *message sends* which define the path of the *receiver* cell and the message.
+A reaction consists of any number of *message sends* which define the path of a *receiver* cell and the message to be sent.
 
 ```text
 Reaction := MessageSend*
@@ -102,7 +102,7 @@ MessageSend := Receiver Message
 Receiver := Path
 ```
 
-Paths in a reaction can also refer to the received *message* and the the execution *frame*. Frames are cells which are implicitly created for every execution to provide an execution-specific space.
+Paths in a reaction can also refer to the received *message* and the current execution *frame*. Frames are cells which are implicitly created for every received message to provide an execution-specific space.
 
 ```text
 Name := ..|<message>|<frame>
@@ -151,7 +151,7 @@ Hence the message that `D` received is `^.^.C.a1fd5a.E`
 
 ### Concurrent
 
-All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message repeatedly. This way, data flow can be synchronized without requiring a fixed order of execution. Hence that messages may be sent to cells possibly before they exist.
+All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message. This way, data flow can be synchronized without requiring a fixed order of execution. Therefore messages may be sent to cells possibly before they exist.
 
 #### Example
 
@@ -170,7 +170,7 @@ The summation waits (denoted by `~`) until the calculation of both factors is co
 
 ### Abstractable
 
-Every cell has a *stem* cell from which it inherits both its reaction and children. Each inherited child and the reaction can be replaced by the *specialized* cell. In order to send a message to an overwritten cell or execute and overwritten reaction, a path may contain names referring to the *stem* of a cell.
+Every cell has a *stem* cell from which it inherits its reaction and all children. Each inherited child and the reaction can be replaced by the *specialized* cell. In order to send a message to an overwritten cell or execute and overwritten reaction, a path may contain names referring to the *stem* of a cell.
 
 ```text
 Name := ..|<stem>
@@ -188,7 +188,7 @@ Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C
     C   c
 ```
       
-If a message is sent to `B.C`, the reaction of `A.C` is executed in the *context* of `B.C` which means all relative paths will be resolved starting at `B.C`. 
+If a message is sent to `B.C`, the reaction of `A.C` is executed in the *context* of `B.C` which means all paths will be resolved relative to `B.C`. 
 
 If `A.C` has a child `D`, it is inherited as well.
     
@@ -216,7 +216,7 @@ If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `
 
 ### Distributed
 
-A cell can be distributed over multiple processes and machines. A cell is connected to its *peer* by sending it a *join* signal with the connection parameters. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal 
+A cell can be distributed over multiple processes and machines. A cell is connected to a *peer* by sending it a *join* signal with the connection parameters. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal 
 
 #### Example
 
