@@ -215,7 +215,9 @@ If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `
 
 ### Distributed
 
-A cell can be distributed over multiple processes and machines. A cell is connected to a *peer* by sending it a *join* signal with information about how the peer can be reached. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal in turn until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal.
+A cell can be distributed over multiple processes and machines. It is connected to a *peer* by sending it a *join* signal with information about how the peer can be reached. If a cell can't deliver a message, it will forward it to all its peers by sending them a *deliver* signal. If a peer can't deliver the message either, it responds with *failed*, otherwise with *received*. A peer is disconnected from a cell by sending a *leave* signal.
+
+To be able to avoid endlessly forwarding messages in circular peer connections, a *deliver* signal contains a globally unique identifier. There are no guarantees regarding the order of messages or the number an individual message is delivered.
 
 #### Example
 
