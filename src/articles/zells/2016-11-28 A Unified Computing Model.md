@@ -37,9 +37,10 @@ I propose to design a protocol based on a computing model that is an abstraction
 
 This model could be used as a meta-language to create a meaningful but extensible vocabulary. Two uncorrelated services could use this model to discover each others capabilities and use the vocabulary to transfer meaning. The model would also be used to safely transfer not only data between services but also dynamic behaviour (code of any kind, even binary programs) without the need to manually translate either.
 
-This model could make communicating with aliens possible.
+I believe this model could play the role of a ["universal interface language"][kay3] and make communicating with aliens possible.
 
 [Qi]: https://en.wikipedia.org/wiki/Qi
+[kay3]: https://youtu.be/oKg1hTOQXoY?t=3085 
 
 
 ## Properties
