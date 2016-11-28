@@ -1,16 +1,14 @@
-status: draft
-
-In 1963, while working at the Advanced Research Project Agency, J.C.R. Licklider wrote in his [Memorandum to the *Members and Affiliates of the Intergalatic Computer Network*][memo]:
+In 1963, while working at the Advanced Research Project Agency, J.C.R. Licklider wrote in [his Memorandum][memo] to the *Members and Affiliates of the Intergalatic Computer Network*:
 
 > At this extreme, the problem is essentially the one discussed by science fiction writers: "how do you get communications started among totally uncorrelated "sapient" beings?"
 
-[Alan Kay referred to this][kay1] as the *communicating with aliens problem*. Licklider continues:
+Alan Kay [referred to this][kay1] as the *communicating with aliens problem*. Licklider continues:
 
 > But, I should not like to make an extreme assumption about the uncorrelatedness. (I am willing to make an extreme assumption about the sapience.)
 
 Licklider's "Intergalatic Computer Network" became the "ARPANET" which in turn became the "Internet", which quite well fulfills his vision of connecting every single person on the planet.
 
-In the context of the Internet, the "aliens" are two independently developed computer programs and the problem is how to get them talking to each other. Since Licklider allows us to soften the *uncorrelatedness* requirement, we can assume that there exists a common language language that both services know how to speak, albeit it won't be the native language of either. How should this language look like?
+In the context of the Internet, the "aliens" are two independently developed computer programs and the problem is how to get them talking to each other. Since Licklider allows us to soften the *uncorrelatedness* requirement, we can assume that there exists a common language language that both services know how to speak, albeit it probably won't be the native language of either. What should this language look like?
 
 [memo]: http://worrydream.com/refs/Licklider-IntergalacticNetwork.pdf
 [kay1]: https://vimeo.com/22463791
@@ -18,26 +16,26 @@ In the context of the Internet, the "aliens" are two independently developed com
 
 ## Current State
 
-The "language of the Internet" is the Internet Protocol stack (TCP/IP), which allows one program on the internet to talk to any other program. But it only specifies *how* they can talk to each other, not *what* they can talk about or how to discover what the other one talks about.
+One could argue that the "language of the Internet" is the Internet Protocol stack (TCP/IP), which allows one program on the internet to talk to any other program. But it only specifies *how* they can talk to each other, not *what* they can talk about or how to discover what the other one *means*.
 
-It's analogous to the air, lungs and ears. Given enough air, I can certainly *speak* to any other human on the planet that is close by. And they can probably *hear* me, but that doesn't mean they *understand* me or that I can *talk* with them. This is the state that the IP stack leaves us with.
+It's analogous to the air, lungs and ears. Given enough those, I can certainly *speak* to any other human on the planet that is close by. And they can probably *hear* me, but that doesn't mean they *understand* me or that I can *talk* with them. This is the state that the IP stack leaves us with.
 
-The most wide-spread *meaningful* language of the internet is the WorldWideWeb. It specifies how things can be addressed (with URIs/URLs) and how these things can present themselves (with HTML). It provides meaning by specifying what you can do with these resources (such as "post" and "get"). And most importantly it defines how communication is done (with HTTP).
+The most wide-spread *meaningful* language of the internet is the WorldWideWeb. It specifies how things can be addressed (with URIs/URLs) and how these things can present themselves (with HTML). It provides meaning by specifying *verbs* of what you can do with these resources (such as "post" and "get"). And most importantly it defines how communication is done (with HTTP).
 
 The result is a *computing model* that turned out to be quite useful for accessing static documents but really not a good fit for doing anything more interesting. And over the last decades many million of man-hours have been poured into mitigating its design flaws.
 
-I very much agree with Alan Kay's notion that "HTML has gone back to the dark ages and is one of the worst ideas since MS-DOS", as he said in [one of his most iconic talks in 1997][kay2]. A case of "reinventing the flat tire". I also remember him saying once that the web-browser "does too much and not enough". I think what he means is that there are way too many primitives in HTML which all have to be interpreted (doing too much) but it's not at all extensible (not enough). The second critique point also goes for HTTP which has a fixed number of *verbs* which just don't fit in many situations. But the worst design flaw is in HTTP, which assumes that all communication is initiated by the client and no state is preserved in the server.
+I very much agree with Alan Kay's notion that "HTML has gone back to the dark ages and is one of the worst ideas since MS-DOS", as he said in [one of his most iconic talks in 1997][kay2]. I also remember him saying once that the web-browser "does too much and not enough". I think what he means is that there are way too many primitives in HTML which all have to be interpreted (doing too much) but it's not at all extensible (not enough). The second critique point also goes for HTTP which has a fixed number of *verbs* which just don't fit in many situations. But the worst design flaw is in HTTP, which assumes that all communication is initiated by the client and no state is preserved in the server.
 
-How could we do this better?
+How could this be done better?
 
 [kay2]: https://youtu.be/oKg1hTOQXoY?t=1421
 
 
 ## Proposal
 
-I propose to design a protocol based on a computing model that is the ultimate abstraction of all existing and conceivable models and is thus compatible with all of them. I would like to call this model [Qi] which means "breath" and "air" but also "energy flow".
+I propose to design a protocol based on a computing model that is an abstraction of all existing and conceivable models and is thus compatible with all and any of them. I would like to call this model [Qi] which means "breath" and "air" but also "energy flow".
 
-This model could be used as a meta-language to create a meaningful but extensible vocabulary. Two uncorrelated services could use this model to discover each others capabilities and use the vocabulary to transfer meaning. The model would also be used to transfer not only data between services but also dynamic behaviour without the need to manually translate either.
+This model could be used as a meta-language to create a meaningful but extensible vocabulary. Two uncorrelated services could use this model to discover each others capabilities and use the vocabulary to transfer meaning. The model would also be used to safely transfer not only data between services but also dynamic behaviour (code of any kind, even binary programs) without the need to manually translate either.
 
 This model could make communicating with aliens possible.
 
@@ -64,7 +62,7 @@ Path := Name+
 Name := Child
 ```
 
-A name can also refer to the current node it*self* and the *parent* (to move up in the tree) as well as the *root* of the tree.
+A name can also refer to the current node it*self* and its *parent* (to move up in the tree) as well as the *root* of the tree.
 
 ```text
 Name := ..|<self>|<parent>|<root>
@@ -88,13 +86,13 @@ The canonical path of `D` is `°.B.D` where `°` denotes the root and `.` separa
 
 ### Dynamic
 
-A cell may have a *reaction* which is executed every time the cell receives a *message* in the form of a cell path.
+A cell may have dynamic behaviour in the form of a *reaction* which is executed every time the cell receives a *message*. The message is always a single cell, referenced by a path relative to the sender.
 
 ```text
 Message := Path
 ```
 
-A reaction consists of any number of *message sends* which define the path of a *receiver* cell and the message to be sent.
+A reaction consists of any number of *message sends* which define the paths of a *receiver* cell and of the message to be sent.
 
 ```text
 Reaction := MessageSend*
@@ -126,7 +124,7 @@ The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
 °.C °.B
 ```
 
-In its reaction, `C` creates a new cell `E` in the frame (denoted by `#`) and sends it to the child `D` of the received message (denoted by `@`), which is `B`, so to `°.B.D`.
+In its reaction, `C` creates a new cell `E` in the frame (denoted by `#`) and sends it to the child `D` of the received message (denoted by `@`), which is `B`, so the receiver is `°.B.D`.
 
 ```text
 (create #.E)
@@ -151,7 +149,7 @@ Hence the message that `D` received is `^.^.C.a1fd5a.E`
 
 ### Concurrent
 
-All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message. This way, data flow can be synchronized without requiring a fixed order of execution. Therefore messages may be sent to cells possibly before they exist.
+All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message until it is received or the messenger decides it's not deliverable. This way, data flow can be synchronized without requiring a fixed order of execution. Therefore messages may be sent to cells before they exist.
 
 #### Example
 
@@ -184,7 +182,7 @@ Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C
         
 ```text
     A<--B
-    ¦   |
+    |   ¦
     C   c
 ```
       
@@ -194,9 +192,9 @@ If `A.C` has a child `D`, it is inherited as well.
     
 ```text
     A<--B
-    ¦   |
+    |   ¦
     C   c
-    ¦   |
+    |   ¦
     D   d
 ```
 
@@ -216,7 +214,7 @@ If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `
 
 ### Distributed
 
-A cell can be distributed over multiple processes and machines. A cell is connected to a *peer* by sending it a *join* signal with the connection parameters. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal 
+A cell can be distributed over multiple processes and machines. A cell is connected to a *peer* by sending it a *join* signal with information about how the peer can be reached. If a cell can't deliver a message, it will forward it to its peers by sending each a *deliver* signal in turn until one responds with *received*. If a peer can't deliver the message either, it responds with *failed*. A peer can disconnect from a cell by sending a *leave* signal.
 
 #### Example
 
@@ -231,7 +229,7 @@ Given a cell `A` in the process with the ID `111`.
     +-----+
 ```
 
-If a new process (with the ID `222`) is created that contains also cell `A`, the signal `join A 222` is sent to process `111`. This adds a unidirectional connection from the cell in `111` to its peer at `222`.
+If a new process (with the ID `222`) is created that contains also cell `A`, the signal `join A 222` is sent to process `111`. This adds a unidirectional connection from the cell in `111` to its peer int `222`.
 
 ```text
       111        222
@@ -241,3 +239,10 @@ If a new process (with the ID `222`) is created that contains also cell `A`, the
     |     |    |     |
     +-----+    +-----+
 ```
+
+
+## Discussion
+
+The purpose of this document is to invite discussion by providing a precise but readable description of the model. If you find possible design flaws or contradictions, or if you have any other feedback, e.g. regarding applicability or plausibility, please don't hesitate to [let me know][contact].
+
+[contact]: http://rtens.org#contact
