@@ -63,10 +63,10 @@ Path := Name+
 Name := Child
 ```
 
-A name can also refer to the current node it*self* and its *parent* (to move up in the tree) as well as the *root* of the tree.
+To move up in the tree, a path can also contain a reference to the *parent* of a cell as well as the *root* of the tree.
 
 ```text
-Name := ..|<self>|<parent>|<root>
+Name := ..|<parent>|<root>
 ```
    
 #### Example
@@ -93,18 +93,12 @@ A cell may have dynamic behaviour in the form of a *reaction* which is executed 
 Message := Path
 ```
 
-A reaction consists of any number of *message sends* which define the paths of a *receiver* cell and of the message to be sent.
+A reaction can cause any number of *message sends* which define the paths of a *receiver* cell and of the message to be sent.
 
 ```text
 Reaction := MessageSend*
 MessageSend := Receiver Message
 Receiver := Path
-```
-
-Paths in a reaction can also refer to the received *message* and the current execution *frame*. Frames are cells which are implicitly created for every received message to provide an execution-specific space.
-
-```text
-Name := ..|<message>|<frame>
 ```
 
 #### Example
@@ -115,42 +109,21 @@ Given the following cell structure.
        °
      / | \  
     A  B  C
-       |
-       D
 ```
 
-The reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`).
+If the reaction of `A` is to send `B` to `C` (written as `<receiver> <message>`),
 
 ```text
 °.C °.B
 ```
 
-In its reaction, `C` creates a new cell `E` in the frame (denoted by `#`) and sends it to the child `D` of the received message (denoted by `@`), which is `B`, so the receiver is `°.B.D`.
-
-```text
-(create #.E)
-@.D #.E
-```
-
-The resulting structure is the following. Note that the frame cell has an automatically generated unique name.
-
-```text
-       °
-     / | \  
-    A  B  C
-       |  |
-       D  a1fd5a
-          |
-          E
-```
-
-Hence the message that `D` received is `^.^.C.a1fd5a.E`
+then every time `A` receives any message, it will cause `°.B` to be sent to `°.C`.
 
 
 
 ### Concurrent
 
-All messages of a reaction are sent *concurrently*. Each message is sent by a *messenger* which will keep trying to deliver the message until it is received or the messenger decides it's not deliverable. This way, data flow can be synchronized without requiring a fixed order of execution. Therefore messages may be sent to cells before they exist.
+All messages of a reaction are sent *concurrently*. Furthermore, each message is sent by a *messenger* which will keep trying to deliver the message until it is received or the messenger decides it's not deliverable. This way, data flow can be synchronized without requiring a fixed order of execution. Therefore messages may be sent to cells before they exist.
 
 #### Example
 
@@ -175,8 +148,6 @@ Every cell has a *stem* cell from which it inherits its reaction and all childre
 Name := ..|<stem>
 ```
 
-If an inherited cell is modified, it will be *adopted* by its parent by creating a new child with the formerly inherited cell as its stem.
-
 #### Example
 
 Given a cell `A` with a child `C`. If a cell `B` has `A` as stem, it inherits `C` (denoted by lower-case `c`). 
@@ -197,18 +168,6 @@ If `A.C` has a child `D`, it is inherited as well.
     C   c
     |   ¦
     D   d
-```
-
-If `B.C.D` is modified, for example by creating `B.C.D.E`, then both `B.C` and `B.C.D` are adopted, with `°.A.C` and `°.A.C.D` as stem cells respectively.
-    
-```text
-    A<--B
-    |   |
-    C<--C
-    |   |
-    D<--D
-        |
-        E
 ```
 
 
