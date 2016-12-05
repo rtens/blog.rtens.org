@@ -174,9 +174,9 @@ If `A.C` has a child `D`, it is inherited as well.
 
 ### Distributed
 
-A cell can be distributed over multiple processes and machines. It is connected to a *peer* by sending it a *join* signal with information about how the peer can be reached. If a cell can't deliver a message, it will forward it to all its peers by sending them a *deliver* signal. If a peer can't deliver the message either, it responds with *failed*, otherwise with *received*. A peer is disconnected from a cell by sending a *leave* signal.
+A cell can be distributed over multiple processes and machines. It is connected to a *peer* by sending it a *join* signal with information about how the peer can be reached. If a cell can't deliver a message, it will forward it to each of its peers in turn by sending them a *deliver* signal. If a peer can't deliver the message either, it responds with *failed*, otherwise with *received*. A peer is disconnected from a cell by sending a *leave* signal.
 
-To be able to avoid endlessly forwarding messages in circular peer connections, a *deliver* signal contains a globally unique identifier. There are no guarantees regarding the order of messages or the number an individual message is delivered.
+To be able to avoid endlessly forwarding messages in circular peer connections, a *deliver* signal contains a globally unique identifier. Messages are guaranteed to be delivered at most once, but there are no guarantees regarding the order of messages.
 
 #### Example
 
