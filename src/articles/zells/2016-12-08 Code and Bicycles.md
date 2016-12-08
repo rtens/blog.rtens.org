@@ -28,11 +28,48 @@ I never thought about how different the experience of learning how to ride a bic
  
 This seems to be a very intuitive and common approach when teaching something to children: Take the adult version of something, and change something so it's less likely to fail. The problem is that many times, this change destroys the essence of what you want to teach. On a bike with training wheels, it's impossible to learn the one skill you need for riding an actual bike: balancing.
 
+I'm convinced that the opposite approach is way more effective and less frustrating. On balancing bikes, children learn the *essentials* - balancing, leaning into curves - first. It's still safe since their feet are always close to the ground. Once they've mastered these skills and feel confident, they get the pedals. These add some new concepts and require some new skills but nothing too demanding. Pedals are *not* an essential part of bikes but increase its efficiency. That much even that Steve Jobs likened computers to ["bicycle for our minds"][efficiency].
+
+[talk]: https://youtu.be/N9c7_8Gp7gI?t=51
+[hackernews]: https://news.ycombinator.com/item?id=13107281
+[efficiency]: http://www.bikeboom.info/efficiency/
+
 
 ## Don't learn to code
 
+Code is **not** essential for programming. Code plays the role of the pedals. It gives you a very effcient way of describing structure and behaviour and specific programming languages are suited differently well for formulating thoughts of a specific kind but all that does is increase your efficiency.
+
+And this is exactly what has been bothering me about these programming courses. They all start and focus on the code. On a specific language even most of the times. They construct a small, well defined universe with little exercises that keep the learner from failing. But it's the same mistake as putting training wheels on a bike. The learner never gets to actually feel the ground and while it might happen sporadically, this approach impedes learning the *essential* skills of programming.
+
+I have no definite list of what these essentials are. But my guess woul be 
+
+- modelling
+- software design
+- debugging
+- understanding scales
+- managing complexity
+- dealing with uncertanty
+
+None of these require a student to *write code* and most of them not even to read it.
 
 
- 
-[talk]: https://youtu.be/N9c7_8Gp7gI?t=51
-[hackernews]: https://news.ycombinator.com/item?id=13107281
+## Learn to Program
+
+So instead of teaching to *code*, I would love to see a programming course that actually teaches to *program*, preferably without touching code at all but still providing the student tools to build running, living, buggy software. [Etoys], [Scratch] and even spreadsheets could be used for this purpose. These courses probably already exist and just spend less money on marketing.
+
+A simple - albeit subjective - metric to know if a "balancing bike" approach to programming works is how the students feel when released into the "wild" and with how much confidence you can tell if they're ready. They should even have a good feeling for that themselves. The feeling would probably be something like "this feels too slow" as children have when they outgrow their balancing bikes.
+
+If you only ever bike with training wheels, you are never really ready to take them off since you don't actually know how to bike. I remember my first time without them. It was a long-anticipated - but acually kinds arbitrarily chosen - moment. I felt ready and happy. My dad was pushing me to gain momentum and when he released me, it felt like flying for a moment. And then I landed face-first on the ground.
+
+I imagine that students completing one of these courses feel the same way. You did all the exercises, collected all the badges, you feel ready and omniscient. How frustrating must it feel to realize you really only know very little. I know that people learning TDD the "training wheels" way feel like this beause I have taught them that way and saw their frustration when they couldn't apply their new skills to their real-world problems. An [article on testdouble][tdd] describes this situation very nicely although I wouldn't agree with their conclusion.
+
+[Etoys]: http://squeakland.org/
+[Scratch]: https://scratch.mit.edu/
+[tdd]: http://blog.testdouble.com/posts/2014-01-25-the-failures-of-intro-to-tdd.html
+
+
+## Learn to Fly
+
+So whatever you're teaching, don't just put training wheels on your own tools but create new, simpler tools that concentrate on the essentials and let your students learn to fly by touching the ground every once in a while. And accept that they will have to fall a couple of times so give them an environment where hitting the ground is not too painful.
+
+And whatever you're learning, find out what exactly the masters of that skill spend most of their time with. This is probably something important. And with some luck, it's something essential that let's you fly.
