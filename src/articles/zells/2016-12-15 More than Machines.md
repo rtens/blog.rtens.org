@@ -1,4 +1,4 @@
-Status:: draft
+Status: draft
 
 As a software engineer, my opinion is probably more than a bit biased, but to me computers are incredible, almost magical even. Like a daemon from another sphere, all it takes is for you to say the right spell, and it will do your bidding. And like with these daemons, you have to be very careful which exact words you use. My favourite quote on that topic comes from [The Mythical Man-Month] by Fred Brooks
 
