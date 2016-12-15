@@ -205,7 +205,7 @@ If a new process (with the ID `222`) is created that contains also cell `A`, the
 
 ## Discussion
 
-The purpose of this document is to invite discussion by providing a precise but readable description of a proposed unified computing model. If you find possible design flaws or contradictions, or if you have any other feedback, e.g. regarding applicability or plausibility, please don't hesitate to [let me know][contact]. You'll find a reference implementation and proof of concept [on github][qi].
+The purpose of this document is to invite discussion by providing a precise but readable description of a proposed unified computing model. If you find possible design flaws or contradictions, or if you have any other feedback, e.g. regarding applicability or plausibility, please don't hesitate to [let me know][contact]. You'll find a proof-of-concept implementation [on github][qi].
 
 [contact]: http://rtens.org#contact
 [qi]: https://github.com/zells/qi
