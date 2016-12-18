@@ -5,7 +5,7 @@ I the world in a crisis? Is democracy in a crisis? It's probably too early to sa
 Why is this happening? I don't know and I haven't seen a satisfying answer yet. But I have a theory.
 
 [Wahl-o-mat]: https://www.wahl-o-mat.de
-[democracy2]: https://www.opendemocracy.net/ourkingdom/hendrik-wagenaar/is-democracy-in-crisis-no-there's-just-new-type-of-emerging-democracy
+[democracy2]: https://www.opendemocracy.net/ourkingdom/hendrik-wagenaar/is-democracy-in-crisis-no-there%e2%80%99s-just-new-type-of-emerging-democracy
 
 
 ## Technical Debt
