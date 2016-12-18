@@ -61,5 +61,5 @@ So instead of fighting the ignorants and their followers, let's put our energy t
 
 We need a new kind of education. And we need it soon.
 
-[kay]: Talk on CS
+[kay]: https://www.youtube.com/watch?v=N9c7_8Gp7gI
 [Thinking Fast and Slow]: https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow
