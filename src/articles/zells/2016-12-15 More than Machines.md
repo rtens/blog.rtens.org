@@ -1,4 +1,4 @@
-My opinion is probably more than a bit biased, but to me computers are incredible. Almost magical even. Like daemons from another sphere, all it takes is the right spell, and it will do your bidding. And like with these daemons, you have to be very careful which exact words you use. My favourite quote on that topic comes from [The Mythical Man-Month]:
+My opinion is probably more than a bit biased, but to me computers are incredible. Almost magical even. Like daemons from another sphere, all it takes is the right spell, and it will do your bidding (and like with these daemons, you have to be very careful which exact words you use). My favourite quote on that topic comes from [The Mythical Man-Month]:
 
 > The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework [...] The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life, showing things that never were nor could be.  
 > -- Fred Brooks
