@@ -3,11 +3,11 @@ My opinion is probably more than a bit biased, but to me computers are incredibl
 > The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework [...] The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life, showing things that never were nor could be.  
 > -- Fred Brooks
 
-Computers gain this power through a property called *[Turing] completeness*, named after the probably most influential computer scientist to have ever lived. He proofed that a [Turing-complete] machine is *equivalent* to any other such machine. In less precise terms: a computer can emulate any other conceivable computer. Or, in even less precise terms: a computer is not just a machine. It is *all* machines.
+Computers get this power through a property called *[Turing completeness]*, named after the probably most influential computer scientist to have ever lived. In his 1936 [paper], Turing proofed that you can construct a machine that can emulate any other conceivable machine. Or in less precise terms: a computer is not just a machine. It is *all* machines.
 
 [The Mythical Man-Month]: https://en.wikipedia.org/wiki/The_Mythical_Man-Month
-[Turing]: https://en.wikipedia.org/wiki/Alan_Turing
-[Turing-complete]: https://en.wikipedia.org/wiki/Turing_completeness
+[Turing completeness]: https://en.wikipedia.org/wiki/Turing_completeness
+[paper]: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 
 
 ## Cutting the Wings
