@@ -45,6 +45,8 @@ I believe this model could play the role of a ["universal interface language"][k
 
 ## Model
 
+[update: I simplified the model by extracting *composable*, *abstractable* and *distributed*. An up-to-date description of the model can be found [here](https://github.com/zells/core/blob/master/model.md)  ]
+
 The model consists of *composable*, *dynamic*, *concurrent*, *abstractable* and *distributed* objects, called *cells*. The semantics of the model are defined by these properties.
 
 ### Composable
