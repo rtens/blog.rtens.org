@@ -1,6 +1,12 @@
 Status: draft
 
-How do you live your life? Why did you make the decisions you made? How do you want to live you life? What do you want to stand for as a person? These are not the usual questions that you might ask yourself while listening to a talk at a technical conference. Unless you are listening to [Bret Victor]. In [*Inventing on Principle*][video] (transcript [here][transcript]) he talks about nothing less than the most important question of all: What do I want to do with my life?
+
+- victor about living on principle
+- description of my principle requires to talk about first principles
+- first principles of computing
+
+
+How do you live your life? How do you want to live you life? Why did you make the decisions you made? What do you want to stand for as a person? These are not the usual questions that you hear in a talk at a technical conference. Unless you are listening to [Bret Victor]. In [*Inventing on Principle*][video] (transcript [here][transcript]) he speaks about nothing less than the question of all questions: What do I want to do with my life?
 
 [Bret Victor]: http://worrydream.com/
 [video]: https://vimeo.com/36579366
@@ -9,7 +15,66 @@ How do you live your life? Why did you make the decisions you made? How do you w
 
 ## Choices
 
-> There are many ways to live your life. What's maybe the most important thing you can realize in your life, is that every aspect of your life is a choice.
+This is already the [second time][global warming] that Victor has depply inspired me with his words. But I can't remember another presentation that moved as much as this one. He ends it with a truth that is as important and universal as it is simple. It's a liberating realization that yet many people refuse to accept.
+
+> There are many ways to live your life. What's maybe the most important thing you can realize in your life, is that every aspect of your life is a choice. But there are default choices. You can choose to sleepwalk through your life and accept the path that's been laid out for you. You can choose to accept the world as it is. But you don't have to.
+
+That sounds a lot like the usual "quit your job", "follow your dreams" and "listen to your heart" kind of talks. But Victor goes down another path. Instead of letting your economic interests or you heart guide your decisions, he suggests to discover a *principle*. In his words:
+
+> If there is something in the world you feel is a wrong and you have a vision for what a better world could be, you can find your guiding principle. And you can fight for a cause. So after this talk, I'd like you to take a little time and think about what matters to you. What you believe in. And what you might fight for.
+
+[global warming]: tbd
+
+
+## My Principle
+
+I asked myself: What is my principle? I could think of a couple. Some formed out of laziness, some are more reflected. Most are not very important to me. But there is one that stands out. One I that's worth fighting for. One that I'm willing to dedicate my life to.
+
+It's like Victor describes it. Whenever I see this principle violated, it hurts me. I see it as a moral wrong and as  my responsibility to do something about it. It's in a way what I've been writing about in my last couple of articles but I've never tried to put it directly into words. So here's my attempt.
+
+I see computers as an incredibly powerful medium for ideas and I'm convinced they have the potential to bring about the next cognitive revolution. Like the printing press did for reading and writing, we need something to democratize software literacy, the ability to express and understand ideas in sofware. So my principle is that everybody should have cheap, direct and unrestricted access to the full power of computing.
+
+
+## Violations
+
+- sharing a screenshot of text
+- endlessly copying pictures with reduced resolutions
+- struggling with format of a document
+- having to download a list from one service and upload it to another
+- manually restarting wifi when the connection fails
+- repeating a simple instruction manually
+- requiring an internet service for reminding about an unanswered emai
+- all the different messengers
+- depending on third parties for sharing pictures or making a survey
+- identity theft
+- spam
+
+OLPC
+Paul's article about the restrictions of UIs
+Naked objects
+
+Access is restricted by
+- cost and availability of hardware
+- cost and availability of electricity
+- centrlalized infrastructure
+- lack of security
+- lack of privacy
+- lack of identity/reputation (maybe)
+- lack of control over one's own information
+- obstruction by user interfaces
+- complexity of environment
+- lack of interactivity
+
+
+## First Principles
+
+- the principle is violated whenever somebody is unnecessarely obstructed from the essence of computers
+- first principles (elon musk)
+- encapsulated behaviour and messages
+- how the web breaks with encapsulation 
+
+
+------------------------------------------------------------------------
 
 This is from the end of his talk but for me it's the most important lesson in it. It sounds trivial, but most people I know don't believe that. They are firmly convinced that their lives are the way they are mostly because of their circumstances. I hear things like "Of course I have to work in this terrible job, I'm not rich enough to do what I enjoy." or "How am I supposed to find a girlfriend when I ugly?".
 
@@ -17,7 +82,7 @@ But really everything is a choice. If something doesn't go the way you want, you
 
 But you're probably pretty happy with your life. Or at least content. Everything is going more or less the way you've planned. But is that really true? Did you ever consider the choices you *didn't* make? The choices you didn't even see? If you could go back in time and tell the 10-year-old you what your life turned out to be like, would you get excited? Victor warns:
 
-> There are default choices. You can choose to sleepwalk through your life and accept the path that's been laid out for you. You can choose to accept the world as it is. But you don't have to.
+> 
 
 ## Bret's Principle
 
