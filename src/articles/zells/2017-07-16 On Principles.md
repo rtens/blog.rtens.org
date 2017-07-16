@@ -55,10 +55,15 @@ And most importantly, last September I defrosted "zells" and sine then dedicated
 Looking at my paint points and inspirations, my principle seems to have something to do with how people interact with computers. Specifically what models they interact with and what lies between them and the model. But how to phrase it? Searching for inspirations, I looked at other people's principles.
 
 > Creators need an immediate connection to what they're creating. - Bret Victor
+
 > No modes. - Larry Tesler
+
 > Women should vote. - Elizabeth Cady Stanton
+
 > Software must be free, as in freedom. - Richard Stallman
+
 > Enable mankind to solve the world's urgent problems. - Doug Engelbart
+
 > Amplify human reach and bring new ways of thinking to a faltering civilization that desperately needs it. - Alan Kay
 
 In his presentation, Victor uses Larry Tesler and Elizabeth Cado Stanton as examples. He also describes what properties a principle should have.
