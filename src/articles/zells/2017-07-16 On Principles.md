@@ -12,7 +12,7 @@ So I wasn't too surprised when [Bret Victor]'s talk [*Inventing on Principle*][v
 
 How do you live your life? How do you want to live you life? Why did you make the decisions you made? What do you want to stand for as a person? These are not the usual questions that you hear in a talk at a technical conference. But in this talk (transcript [here][transcript]), Victor speaks about nothing less than the question of all questions: What do I want to do with my life?
 
-This is already the [second time][global warming] that Victor has depply inspired me with his words. But I can't remember another presentation that moved as much as this one. He ends it with a truth that is as important and universal as it is simple. It's a liberating realization that yet many people refuse to accept.
+This is already the [second time][climate change] that Victor has depply inspired me with his words. But I can't remember another presentation that moved as much as this one. He ends it with a truth that is as important and universal as it is simple. It's a liberating realization that yet many people refuse to accept.
 
 > There are many ways to live your life. What's maybe the most important thing you can realize in your life, is that every aspect of your life is a choice. But there are default choices. You can choose to sleepwalk through your life and accept the path that's been laid out for you. You can choose to accept the world as it is. But you don't have to.
 
@@ -21,7 +21,7 @@ That sounds a lot like the usual "quit your job", "follow your dreams" and "list
 > If there is something in the world you feel is a wrong and you have a vision for what a better world could be, you can find your guiding principle. And you can fight for a cause. So after this talk, I'd like you to take a little time and think about what matters to you. What you believe in. And what you might fight for.
 
 [transcript]: http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principleb/
-[global warming]: tbd
+[climate change]: http://worrydream.com/ClimateChange/
 
 
 ## The Pain
