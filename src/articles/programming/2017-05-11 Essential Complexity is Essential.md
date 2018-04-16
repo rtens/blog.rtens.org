@@ -10,15 +10,15 @@ Outside the technology lies the conceptual space of the problem you are trying t
 
 This is why in the talk I claim that "complexity is essentially in the domain".
 
-The good news is that we might actually one day defeat unessential complexity. Many people, myself included, are working on it. But the bad news is that even then we will still be stuck with the complexity of the domain, which we cannot reduce without reducing the problem, since itís part of it.
+The good news is that we might actually one day defeat unessential complexity. Many people, myself included, are working on it. But the bad news is that even then we will still be stuck with the complexity of the domain, which we cannot reduce without reducing the problem, since it‚Äôs part of it.
 
-But itís really not that bad because without unessential complexity, the difficulty of the solution depends solely on the problem. Easy problems, like organizing your grocery shopping would be trivial to solve. Harder problems, like analyzing your supermarket receipts and calculating your consumption rate of butter, would be only proportionally more difficult, with a smooth learning curve between them.
+But it‚Äôs really not that bad because without unessential complexity, the difficulty of the solution depends solely on the problem. Easy problems, like organizing your grocery shopping would be trivial to solve. Harder problems, like analyzing your supermarket receipts and calculating your consumption rate of butter, would be only proportionally more difficult, with a smooth learning curve between them.
 
-My personal hope is that it is possible to build a software development tool that avoids all unessential complexities. With such a tool, everybody could solve most of their own problems themselves. It could lead to a general software literacy, enabling people of every trade to take advantage of the full potential of computers, without depending on a tiny fraction of the ìeliteî to solve their problems for them.
+My personal hope is that it is possible to build a software development tool that avoids all unessential complexities. With such a tool, everybody could solve most of their own problems themselves. It could lead to a general software literacy, enabling people of every trade to take advantage of the full potential of computers, without depending on a tiny fraction of the ‚Äúelite‚Äù to solve their problems for them.
 
 Without technical complexity to conquer, software creators could completely focus on the domain. Instead of battling with encoding and databases, programmers could spend their time on understanding the world and forging their insights into dynamic models.
 
-But we are not quite there yet. The tools we use are still complex enough that they require weeks of training before you can write software that solves even the simplest of your problems, let alone the harder ones. So you donít need to worry that your knowledge of the newest Javascript framework becomes obsolete soon. Our jobs are safe yet.
+But we are not quite there yet. The tools we use are still complex enough that they require weeks of training before you can write software that solves even the simplest of your problems, let alone the harder ones. So you don‚Äôt need to worry that your knowledge of the newest Javascript framework becomes obsolete soon. Our jobs are safe yet.
 
 We still need professionals for creating and maintaining every tiny bit of software but because engineers have an inclination towards technical problems, we tend to neglect the domain.
 
