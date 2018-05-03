@@ -1,3 +1,5 @@
+Status: draft
+
 I used last Christmas break to watch "The Expanse" which quickly became my favorite SciFi series with its incredibly realistic and inspirational vision of a humanity that has colonized the solar system. And it was one sentence in this show that struck a unexpected chord with me. It was a comment about how - even decades after populating Mars and the asteroid belt - they still used earth-based units to measure time such as days, months and years. As probably almost every software developer, I stuggled more than once with the convoluted dominant time system of this planet, and this comment got me once again thinking about how an alternative might look like.
 
 The result is *[Reference Time]*, a time system designed for regularity, usability, and relativity.
@@ -81,30 +83,3 @@ The **International Atomic Time** ([TAI]) is continuous (by ignoring leap second
 [Kurzgesagt]: https://www.youtube.com/watch?v=czgOWmtGVGs
 [Geoid]: https://en.wikipedia.org/wiki/Geoid
 [start of civilization]: https://en.wikipedia.org/wiki/History_of_the_world#Rise_of_civilization
-
-------------------------------------------------------------------------------
-
-Dropped Segments
-
-## Current Uses (drop)
-Conversion is easy since it's always just a fixed offset that needs to be added or subtracted. Adding time is easy for the same reason.
-- international appointments (UHT)
-- relative to local midnight
-- relative to start of day (8:00h)
-- relative to UHT unit (0g, 0r, 0c)
-- age (celebrating rotations, 10s of rotations more, and (fractions of) generations most)
-
-## Space Age Uses (drop)
-- Other planets could have their own universal and local zero points, based on first colonization, orbit and rotation frequencies
-- Vessels would also have local clocks, zeroed on inauguration or mission start
-- all clocks need to be relative because of time dilation but universal human time would be broadcasted
-- light time from earth would have to be subtracted
-
-## Challenges (drop)
-- division/multiplication would be easier with base 12 or 16
-- a cycle might be too far off natural rhythm
-
-## Conclusion
-- mechanic watches and human calendar won't disappear anytime soon
-- computers make management of multiple time systems manageable
-- having one that is just a little more personal and human-friendly could make your day easier
