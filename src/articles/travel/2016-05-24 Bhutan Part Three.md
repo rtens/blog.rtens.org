@@ -1,4 +1,3 @@
-Status: draft
 Tags: Bhutan
 
 Only little more than a month to go. Time for an update. I'll try to make this one quick.
@@ -47,34 +46,3 @@ For three days I helped Farmer Sangay and the rest of the Happy Chips gang to pr
 ![Clearing the irigation channel to fill the pool](/static/img/bhutan/20160324_161355.jpg)
 
 ![Morning view](/static/img/bhutan/20160326_072237.jpg)
-
-
-### Garizompa
-
-### Potato farm
-
-### Etho Meto festival
-
-
-## Hikes
-
-### Druk Path
-
-### Dagala
-
-### Phajoding to Buddha Point
-
-### Hike to chotom
-
-
-## Projects
-
-### movies.bt
-
-### Groupcash workshop
-
-### Visit at CSOA
-
-### Visit at RMA
-
-![](/static/img/bhutan/.jpg)
