@@ -24,7 +24,7 @@ So twice a week the three of us sit in this very nice looking classroom in the D
 ![Our classroom](/static/img/bhutan/20160311_090254.jpg)
 
 
-## Trips
+## Paro Tshetchu
 
 End of march was one of the largest festivals of the year in Paro. Allegedly it's also the *posh one* where everybody dresses up the best they can and it's all about see and be seen. So of course we all dressed up including my little niece and I bought a Gho (the traditional garmet) for the occasion.
 
@@ -34,6 +34,8 @@ I went with a friend and stayed at his girlfriend's parents' house which was qui
 
 ![My own Gho](/static/img/bhutan/20160320_165544.jpg)
 
+
+## Farming Potatoes
 
 A couple of days later I was on my way to Paro again. This time with a sleeping bag in my luggage. My destination was the new Happy Chips potato-farm-to-be a little north of Paro, just underneath the ruins of the Drukgyal Dzong. 
 
