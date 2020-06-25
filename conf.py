@@ -4,7 +4,6 @@ AUTHOR = 'Nikolas Martens'
 SITENAME = "Blog@rtens.org"
 TIMEZONE = "Europe/Berlin"
 TWITTER_USERNAME = 'rtens_'
-GOOGLE_ANALYTICS = 'UA-40634631-1'
 
 GITHUB_BLOG_URL = "https://github.com/rtens/blog.rtens.org"
 
