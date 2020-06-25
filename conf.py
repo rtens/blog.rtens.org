@@ -8,13 +8,14 @@ GOOGLE_ANALYTICS = 'UA-40634631-1'
 
 GITHUB_BLOG_URL = "https://github.com/rtens/blog.rtens.org"
 
-SOCIAL = (('twitter', 'http://twitter.com/rtens_'),
-          ('github', 'http://github.com/rtens'),
-          ('deviantart', 'http://nikolasalokin.deviantart.com'),
-          ('web', 'http://rtens.org'),
+SOCIAL = (('twitter', 'https://twitter.com/rtens_'),
+          ('github', 'https://github.com/rtens'),
+          ('deviantart', 'https://nikolasalokin.deviantart.com'),
+          ('linkedin', 'https://www.linkedin.com/in/nikolas-martens-803bb0112/'),
+          ('web', 'https://rtens.org'),
 		  ('email', 'mailto:blog@rtens.org'))
 
-SITEURL = 'http://blog.rtens.org'
+SITEURL = 'https://blog.rtens.org'
 ROOT_URL = SITEURL
 FEED_RSS = 'feeds/rss.xml'
 
