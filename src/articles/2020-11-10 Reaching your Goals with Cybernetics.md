@@ -50,7 +50,7 @@ Yes! By showing you an goal-reaching method inspired by cybernetics.
 
 Cybernetics is the science of controlling complex systems. It stems from the Greek word that mean "to steer, navigate, or govern". It looks like this:
 
-![the cybernetic loop](static/img/cybernetic_loop.jpg)
+![the cybernetic loop](/img/cybernetic_loop.jpg)
 				   
 We got You and the World. We also got your Goal. To reach it you must perform some Actions that change the World into one where there is a medal hanging on that wall. That's the cybernetic loop. Perform some Action, check if you have reached your Goal, perform another Action until you reached it.
 
