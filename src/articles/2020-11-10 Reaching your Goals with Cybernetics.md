@@ -1,5 +1,7 @@
 Status: draft
 
+**I've recently been thinking about a lot about how to set, track and reach goals and wanted to share a couple of ideas. When I was looking for an example my thoughts turned into a dialogue so I stuck with it.**
+
 So what's your goal?
 
 *I want to go running more often.*
@@ -72,7 +74,7 @@ Why not? It's still a place where you want to be. And defining how to tell if yo
 
 *I see. But my goal is not small and I definitely haven't reached it yet.*
 
-True. To reach it, you need to move towards it. How could we tell if you are?
+True. To reach it, you need to move towards it. How could you tell if you are making progress?
 
 *If I go running every week.*
 
