@@ -1,6 +1,6 @@
 Status: draft
 
-**I've recently been thinking about a lot about how to set, track and reach goals and wanted to share a couple of ideas. When I was looking for an example my thoughts turned into a dialogue so I stuck with it.**
+**I've recently been thinking about a lot about how to set, track and reach goals and wanted to share a couple of ideas. While I was looking for an example my thoughts turned into a dialogue so I stuck with it.**
 
 So what's your goal?
 
