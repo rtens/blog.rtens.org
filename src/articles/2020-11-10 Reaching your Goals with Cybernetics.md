@@ -1,16 +1,14 @@
-Status: draft
+**I've recently been thinking about a lot about how to set, track and reach goals. Privately, as well as professionally. And I wanted to share a couple of thoughts, which just happened to come out in dialogue form. So here we go.**
 
-**I've recently been thinking about a lot about how to set, track and reach goals and wanted to share a couple of ideas. While I was looking for an example my thoughts turned into a dialogue so I stuck with it.**
-
-So what's your goal?
+What's your goal?
 
 *I want to go running more often.*
 
-And why do you want to go running more often?
+Why do you want to go running more often?
 
-*So I'm in better shape.*
+*I want to be a better runner.*
 
-Why do you want to be in better shape?
+Why do you want to be a better runner?
 
 *So I can run a Marathon.*
 
@@ -24,15 +22,15 @@ Sound like running a Marathon is your real goal.
 
 Yes, start small but dream big. And telling your grandchildren about your achievement sounds like a wonderful dream.
 
-*Indeed it is. I can already picture it. All of us sitting around a fire. Their eyes lighting up as I tell the story.*
+*True. I can already picture it. All of us sitting around a fire. Their eyes lighting up as I tell the story.*
 
 Perfect. This vision will be your motivation.
 
 *And how do I get there?*
 
-First you need to know where you're going. How would you know that you're there?
+First you need to know where you're going. How would you know that you've reached your goal?
 
-*I would remember having run a Marathon*
+*I would remember having run a Marathon.*
 
 Sure. But would there anything objectively different?
 
@@ -50,11 +48,11 @@ Yes! By showing you an goal-reaching method inspired by cybernetics.
 
 *Cyber-what? Not sure if that's right for me. I'm not into computer stuff.*
 
-Cybernetics is the science of controlling complex systems. It stems from the Greek word that mean "to steer, navigate, or govern". It looks like this:
+Cybernetics is the science of controlling complex systems. It stems from the Greek word that means "to steer, navigate, or govern". It looks like this:
 
 ![the cybernetic loop](/img/cybernetic_loop.jpg)
 				   
-We got You and the World. We also got your Goal. To reach it you must perform some Actions that change the World into one where there is a medal hanging on that wall. That's the cybernetic loop. Perform some Action, check if you have reached your Goal, perform another Action until you reached it.
+There is **You** and the **World**. And here is your **Goal**. To reach it you must perform some **Actions** that change the World into one where there is a medal hanging on that wall. That's the cybernetic loop. Perform some Action, check if you have reached your Goal, perform another Action until you reached it.
 
 *That's not at all helpful.*
 
@@ -66,15 +64,15 @@ That's right. But it will tell you if your Actions were successful.
 
 *But only after I have already achieved my Goal.*
 
-Exactly. And for some goals that would be enough. And for some goals that would be enough. For small for example or for goals that we have already reached?
+Exactly. And for some goals that would be enough. For small ones for example or for goals that you have already reached.
 
-*If you've already reached it, it's not a goal.*
+*If I've already reached it, it's not a goal.*
 
 Why not? It's still a place where you want to be. And defining how to tell if you're still there is useful if you want to make sure you don't drift away.
 
 *I see. But my goal is not small and I definitely haven't reached it yet.*
 
-True. To reach it, you need to move towards it. How could you tell if you are making progress?
+True. To reach it, you need to make sure you are constantly moving towards it. How could you tell if you are making progress?
 
 *If I go running every week.*
 
@@ -96,9 +94,9 @@ So then the further you can run in 4 hours, the closer you will be to running a 
 
 Going running every so often will probably bring you closer to running a Marathon. But we don't know how much closer. We can only guess. It's a proxy. Like the gas meter in your car. It shows that you're probably driving, but not how fast or in which direction.
 
-*But it much less work to count my runs per week than going for a 4h run just to see how far I get.*
+*But it's much less work to count my runs per week than going for a 4h run just to see how far I get.*
 
-You're right. It is much less work. That's why we will use it to estimate your progress. But we need to remember that it's not the real deal.
+You're right. It is much less work. That's why we will use it as well to estimate your progress. But we need to remember that it's not the real deal.
 
 *I understand. What about the other things?*
 
@@ -110,7 +108,7 @@ That's true. But they are even less likely to indicate real progress. So I would
 
 *But doesn't every Action I take bring me closer to the Goal? That's why I'm doing them right?*
 
-Yes. But using them to measure your progress would follow circular logic. You would complete these tasks, to get closer to your goal. But if measure your progress by how many tasks you've completed you don't gain any new information. Instead, we're gonna treat each action as an assumption and use our indicators to proof that the action helped with our progress.
+Yes. But using them to measure your progress would follow a circular logic. You would complete these tasks, to get closer to your goal. But if measure your progress by how many tasks you've completed you don't gain any new information. Instead, we're gonna treat each action as an hypothesis and use our indicators to proof that the action helped with our progress.
 
 *So I can't even use the tasks as a proxy - like the number of times I go running?*
 
