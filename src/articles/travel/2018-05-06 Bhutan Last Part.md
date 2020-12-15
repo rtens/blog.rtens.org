@@ -1,4 +1,3 @@
-Status: draft
 Tags: Bhutan
 
 It's been almost three years now since I returned from my visit to the Himalayas. The whole time I wanted to finish this series, write about the rest of my time there. But as so often, something got in the way.
@@ -148,18 +147,35 @@ And just to round things of, I ended my Bhutan journey like I started with, with
 ![rent-a-bike](/img/bhutan/20160605_190014.jpg)
 
 
+## My Final Weeks
+
+My last weeks in Bhutan I spent doing all the things that I enjoyed the most. Exploring the areas around Thimphu, spending time with my niece, and supporting Happy Chips.
+
+![Dzong of Thimphu](/img/bhutan/20160530_161402.jpg)
+![on the way to paro](/img/bhutan/20160608_131157.jpg)
+![Bhutan life](/img/bhutan/20160610_112818.jpg)
+![big bug](/img/bhutan/20160617_192636.jpg)
+![happy chips campaign](/img/bhutan/20160619_161128.jpg)
+
+
 ## Monk in Tango
+
+After months of working on it, my sister actually managed through a friend to arrange for me the possibility of spending two weeks in a Buddhist monastery. It was a true honor.
+
+I was welcomed warmly, got my own room, and was able to participate in all activities (as far as my abilities allowed). My days looked somewhat like this: I got up with the daily gong at five, spent one hour chanting and meditating, had rice for breakfast, spent a couple of hours reading, walking or meditating, had rice for lunch, gave English lessons, meditated some more, had rice for dinner, and went to bed with the setting sun.
+
+Since I'm worried that I'll never publish this otherwise, I'll let the pictures speak for themselves.
 
 ![watching football](/img/bhutan/20160621_221549.jpg)
 ![going to class](/img/bhutan/20160622_090343.jpg)
-![sacret bridge](/img/bhutan/20160622_094746.jpg)
+![sacred bridge](/img/bhutan/20160622_094746.jpg)
 ![shoes outside praying hall](/img/bhutan/20160622_161914.jpg)
 ![me in monk robes](/img/bhutan/20160623_105037.jpg)
 ![lunch time](/img/bhutan/20160623_120557.jpg)
 ![computer class](/img/bhutan/20160624_191238.jpg)
 ![paying hall](/img/bhutan/20160625_193938.jpg)
 ![my favourite spot](/img/bhutan/20160626_092540.jpg)
-![the monestary](/img/bhutan/20160626_163027.jpg)
+![the monastery](/img/bhutan/20160626_163027.jpg)
 ![making rice statues](/img/bhutan/20160628_085227.jpg)
 ![tango](/img/bhutan/20160628_091739.jpg)
 ![carrying up construction material](/img/bhutan/20160628_092156.jpg)
@@ -170,19 +186,13 @@ And just to round things of, I ended my Bhutan journey like I started with, with
 ![posing](/img/bhutan/20160630_132114.jpg)
 
 
-## My Final Weeks
-
-![Dzong of Thimphu](/img/bhutan/20160530_161402.jpg)
-![on the way to paro](/img/bhutan/20160608_131157.jpg)
-![Bhutan life](/img/bhutan/20160610_112818.jpg)
-![big bug](/img/bhutan/20160617_192636.jpg)
-![happy chips campaign](/img/bhutan/20160619_161128.jpg)
-
-
 ## Goodbye Bhutan
 
+After Tango I only had about a week left. So I had one last good-bye party, gave Jimmey a final rub, and headed to Paro.
 
-![goodbye party](/img/bhutan/20160702_203859.jpg)
+![goodbye party](/img/bhutan/20160702_203859_LLS.jpg)
 ![goodbye to jimmy](/img/bhutan/20160704_120627.jpg)
 ![master smith](/img/bhutan/20160705_150144.jpg)
 ![last morning in Bhutan](/img/bhutan/20160706_062755.jpg)
+
+An amazing time, that I wish I would have written more about when it wasn't years ago. But I hope these words and pictures give somewhat an impression of my time there.
