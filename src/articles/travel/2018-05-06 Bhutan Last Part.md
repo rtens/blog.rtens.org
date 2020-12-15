@@ -31,7 +31,7 @@ After a long cold winter, the hiking season finally started for me and I manage 
 
 The first one was with three Bhutanese friends along the "Druk Path" from Thimphu to Paro.
 
-It started on a beatiful spring day.
+It started on a beautiful spring day.
 
 ![start off druk path](/img/bhutan/20160430_113024.jpg)
 ![first break](/img/bhutan/20160430_115613.jpg)
