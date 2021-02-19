@@ -2,5 +2,5 @@ Last week I had the pleasure of presenting my talk on [Specification by Example]
 
 [sbe]: http://specificationbyexample.com
 [Codemotion]: http://warsaw2016.codemotionworld.com/
-[slides]: static/res/codemoton_roma_2014_Nikolas_Martens.pdf
+[slides]: /res/codemoton_roma_2014_Nikolas_Martens.pdf
 [rometalk]: http://blog.rtens.org/codemotion-2014-rome.html

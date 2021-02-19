@@ -25,4 +25,4 @@ We still need professionals for creating and maintaining every tiny bit of softw
 If we accept that technical complexity is essentially in the domain, we can start to avoid technical complexity and focus on the essential problem, the domain. This is the premise of Domain-Driven Design.
 
 [blog]: https://phpconference.com/blog/essential-complexity/
-[slides]: http://blog.rtens.org/static/res/rapid_prototyping_with_ddd_v2.pdf
+[slides]: /res/rapid_prototyping_with_ddd_v2.pdf

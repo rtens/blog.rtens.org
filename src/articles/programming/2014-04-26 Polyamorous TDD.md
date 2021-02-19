@@ -33,7 +33,7 @@ The important thing for me is to *have a choice*. And also to consider them. And
 
 And of course there are even more alternatives. Polyamory for example. And I might be stretching the metaphor a bit here but to me, the polyamorous approach to testing would be to do Unit Testing as well as testing through the GUI as well as all the testing strategies that lie between those two extremes.
 
-![spectrum of testing strategies](static/res/testing/spectrum.png)
+![spectrum of testing strategies](/res/testing/spectrum.png)
 
 I often wonder why so little is said about the range in the middle and why both, David and Robert seem to ignore it.
 
@@ -54,7 +54,7 @@ For TDDlers it's almost trivial to answer the question if a programm *works as e
 
 But as Uncle Bob states correctly, testing through the GUI is slow. Very slow if done manually, and still pretty slow but also very fragile if done automatically. It's fragile because the GUI changes way more than the *behaviour* of the software so GUI tests tend to give a lot of false positives and thus are maintanance heavy. The following graph shows my impression of how execution time increases with the level of integration.
 
-![execution time over integration](static/res/testing/execution_time.png)
+![execution time over integration](/res/testing/execution_time.png)
 
 But tests written at GUI level are very attractive for business stake holders because they can understand them and therefore *trust* them. But we can't test the entire system through the GUI so we need Unit level tests as well. Tests that the developers can trust.
 

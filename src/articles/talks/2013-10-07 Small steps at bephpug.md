@@ -6,7 +6,7 @@ The talk has the name "Small Steps - the magic of TDD" and is basically about ho
 
 [bephpug]: http://bephpug.de
 [t500]: http://www.samsung.com/us/computer/pcs/XE500T1C-A05US
-[talk]: static/res/Nikolas_Martens_Small_steps__bephpug.zip
+[talk]: /res/Nikolas_Martens_Small_steps__bephpug.zip
 [comment1]: https://twitter.com/__edorian/status/385123964148019200
 [comment2]: https://twitter.com/klimpong/status/385109934956093440
 [comment3]: https://twitter.com/bephpug/status/385107357145239552

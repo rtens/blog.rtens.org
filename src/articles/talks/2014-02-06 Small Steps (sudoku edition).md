@@ -12,5 +12,5 @@ So I broke down the sudoku solver problem into "small steps" - the smallest I co
 [google]: https://www.google.de/search?q=sudoku+tdd
 [pros]: http://johannesbrodwall.com/2010/04/06/why-tdd-makes-a-lot-of-sense-for-sudoko/
 [cons]: http://devgrind.com/2007/04/25/how-to-not-solve-a-sudoku/
-[code]: static/res/sudoku_solver.zip
+[code]: /res/sudoku_solver.zip
 [comment]: https://twitter.com/IchHabRecht/status/430808466295648256

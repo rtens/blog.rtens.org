@@ -12,7 +12,7 @@ At my own session on Saturday afternoon was every seat taken as well and therefo
 
 [sbe]: http://specificationbyexample.com
 [Codemotion]: http://madrid.codemotionworld.com/
-[slides]: static/res/sbe_froscon8.pdf
+[slides]: /res/sbe_froscon8.pdf
 [comment1]: https://twitter.com/wnohang/status/391592132667928577
 [comment2]: https://twitter.com/aamormo/status/391516235118436353
 [comment3]: https://twitter.com/daviddiazgismer/status/391524498979434496
